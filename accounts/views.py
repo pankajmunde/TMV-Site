@@ -5,7 +5,6 @@ from django.views.generic import CreateView
 from django.contrib.auth.forms import AuthenticationForm
 from .models import User
 from .form import CustomerSignUpForm
-from django.contrib.auth.decorators import login_required
 
 
 class CustomerRegister(CreateView):
@@ -20,6 +19,9 @@ class CustomerRegister(CreateView):
 
 
 def login_request(request):
+    if request.user.is_authenticated:
+        return redirect('/admissions')
+
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
@@ -45,7 +47,3 @@ def logout_view(request):
 def home_view(request):
     return render(request, 'index-2.html')
 
-
-@login_required
-def admissions_view(request):
-    return render(request, 'form.html')

@@ -26,7 +26,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', account_view.home_view, name='home'),
     url(r'^accounts/', include('accounts.urls')),
-    path('admissions/', account_view.admissions_view, name='admissions'),
+    url(r'^admissions/', include('admission_app.urls')),
+    # path('admissions/', account_view.admissions_view, name='admissions'),
 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
