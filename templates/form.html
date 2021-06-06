@@ -1,0 +1,1169 @@
+{% load  static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Education</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.html">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/logo/junior.png' %}" width="50%">
+
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/progressbar_barfiller.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/gijgo.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animated-headline.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+
+<style>
+    .form-control {
+        display: block;
+        width: 100%;
+        height: 40px;
+        padding: .375rem .75rem;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+
+    .dvWhiteBG {
+        background: #fff;
+        padding: 16px;
+        margin-bottom: 30px;
+        border: 1px solid #e7eaed !important;
+    }
+
+    .form-control1 {
+        border: 1px solid #a9a9a9 !important;
+        border-radius: 3px !important;
+        height: 40px !important;
+        color: #5f7293 !important;
+        background: #EDEFF4 !important;
+    }
+
+    .blue_button-yellow {
+        background-color: #fcbb2c;
+        border-radius: 50px;
+        height: 40px !important;
+        width: 100px;
+        border: none;
+        color: white;
+    }
+
+    .blue_button-black {
+        background-color: #2a3f54;
+        border-radius: 50px;
+        color: white;
+        height: 40px !important;
+        width: 100px;
+        border: none;
+    }
+
+    .heading2 {
+        font-size: 1rem !important;
+        color: #252525;
+        padding: 0 0 10px 0px;
+    }
+
+    .blue_button {
+        background-color: #0e2a5d;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        height: 40px;
+        width: 20%;
+    }
+
+    .file-upload {
+        display: block;
+        text-align: center;
+        font-size: 1rem;
+        padding: 9px 0px;
+        display: inline-block;
+        line-height: 40px;
+        color: #34495e;
+        cursor: pointer;
+        line-height: 30px;
+        text-align: left;
+        background-color: #fff;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+
+    .grid_header {
+        white-space: nowrap !important;
+        background-color: #f8f8f8 !important;
+    }
+
+    .table-bordered td,
+    .table-bordered th {
+        border: none;
+    }
+
+    .form-group {
+        margin-bottom: 0rem;
+    }
+
+    tr {
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .vw_tbl {
+        width: 100% !important;
+        overflow: auto !important;
+        height: 220px;
+    }
+
+    .page-link {
+        color: #09b1aa !important;
+        line-height: 1.75;
+    }
+
+    .page-link:hover {
+        color: #ffffff !important;
+        background-color: #09b1aa;
+    }
+
+    .page_size {
+        width: 37px !important;
+        height: 40px !important;
+    }
+
+    .page_size_right {
+        float: right;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        color: #09b1aa;
+    }
+
+    .navbar {
+        padding: 0px;
+        float: right;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+
+    .dproD {
+        width: 100%;
+        height: 39px;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+    }
+
+    .modal-dialog {
+        max-width: 800px;
+    }
+
+    .showSingle {
+        cursor: pointer;
+    }
+
+    .grid_plus {
+        border-style: none;
+        border-color: inherit;
+        border-width: 0px;
+        background: url({% static  'img/plus.gif' %}) no-repeat 130px 4px;
+        display: block;
+        width: 174px;
+        height: 30px !important;
+        float: right;
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    .active {
+        background-color: #3b5997 !important;
+        color: #fff !important;
+    }
+
+    .GrayBG {
+        background: #EDEFF4;
+    }
+
+    .mt-5 {
+        margin-top: 5px;
+    }
+
+    .mt-20 {
+        margin-top: 20px;
+    }
+
+    .right_border {
+        border-right: 1px black solid !important;
+    }
+</style>
+
+<body>
+
+<div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+            <div class="preloader-circle"></div>
+            <div class="preloader-img pere-text">
+                <img src="{% static 'assets/img/logo/junior.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<header>
+
+    <div class="header-area">
+        <div class="main-header ">
+            <div class="header-top d-none d-sm-block">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="d-flex justify-content-between flex-wrap align-items-center">
+                                <div class="header-info-left">
+                                    <ul>
+                                        <li><i class="fas fa-map-marker-alt"></i> TMV Colonu Mukund Nagar 37</li>
+                                        <li><i class="fas fa-phone-alt"></i> 020 2447 3117</li>
+                                    </ul>
+                                </div>
+                                <div class="header-info-right">
+                                    <ul class="header-social">
+                                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom  header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo">
+                                <a href="/"><img src="{% static 'assets/images1/tilak.png' %}" alt=""
+                                                 width="40%"></a>
+                                <!-- <a href="/"><img src="{% static 'assets/img/logo/junior.png' %}" alt="" width="100%"></a> -->
+
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10">
+
+                            <div class="main-menu f-right d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="">Admission form</a></li>
+                                        <!-- <li><a href="">School</a>
+                                            <ul class="submenu">
+                                                <li>
+                                                    <a href="school_one.html">Attendance</a>
+                                                    <a href="school_one.html">Uniform</a>
+                                                    <a href="school_one.html">Parents Participation</a>
+                                                    <a href="school_two.html">General Rules</a>
+                                                    <a href="school_two.html">Books</a>
+                                                    <a href="school_two.html">Tiffin</a>
+                                                    <a href="school_two.html">School Fees</a>
+                                                    <a href="school_three.html">Examination</a>
+                                                    <a href="school_three.html">Assessment</a>
+                                                    <a href="school_three.html">Withdrawal</a>
+                                                    <a href="school_three.html">Library Fees</a>
+                                                    <a href="school_four.html"> Holiday List</a>
+                                                    <a href="school_four.html"> Timing</a>
+
+                                                </li>
+                                            </ul>
+                                        </li> -->
+                                        <li><a href="">Pri-Primary</a></li>
+                                        <li><a href="">Primary</a></li>
+                                        <li><a href="">Rules and Regulation</a></li>
+                                        <li><a href="">Application Receipt</a></li>
+
+                                        {#                                        <li>#}
+                                        {#                                            <div class="header-right-btn f-right  ml-15">#}
+                                        {#                                                    <a href="" class="header-btn">Login</a>#}
+                                        {#                                                <span>#}
+                                        {#                                                    <p>Welcome {{ user.username }} </p>#}
+                                        {#                                                    <button href="/accounts/logout"><i class="fa fa-power-off"></i></button>#}
+                                        {#                                                </span>#}
+                                        {##}
+                                        {#                                            </div>#}
+                                        {#                                        </li>#}
+                                        <li>
+                                            <div class="header-right-btn f-right  ml-15">
+                                                <a href="/accounts/logout"
+                                                   class="header-btn">Logout</a>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<div class="container text-center mt-20">
+    <p>Tilak Maharashtra Vidyalaya’s Trust</p>
+    <h2>TILAK MAHARASHTRA VIDYALAYA’S </h2>
+    <p>TMV Campus, Mukundnagar, Gultekadi, Pune-411037</p>
+    <h3>PRIMARY ADMISSION FORM</h3>
+
+</div>
+
+<form method="post">
+    <div class="container mt-3 mb-1">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>GENERAL INFORMATION </h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container dvWhiteBG ">
+
+
+        <div class="row mt-20">
+
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label>Admission for standard</label> <br>
+                    <!-- <input type="text" class="form-control" placeholder=""> -->
+                    <select class="dproD" name="admission_std">
+                        <option value="volvo">First Standards</option>
+                        <option value="volvo">Second Standards</option>
+                        <option value="saab">Third Standards</option>
+                        <option value="fiat">Fourth Standards</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label>Date of Birth </label> <br>
+                    <input type="date" class="form-control" name="dob" placeholder="">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-20">
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <label>Name</label> <br>
+                    <input type="text" name="student_surname" class="form-control" placeholder="Surname">
+                </div>
+            </div>
+            <div class="col-lg-2 mt-5">
+                <div class="form-group">
+                    <label></label> <br>
+                    <input type="text" class="form-control" name="student_name" placeholder="First name ">
+                </div>
+            </div>
+            <div class="col-lg-2 mt-5">
+                <div class="form-group">
+                    <label></label> <br>
+                    <input type="text" class="form-control" name="student_father_name" placeholder="Father’s name ">
+                </div>
+            </div>
+
+            {#            <div class="col-lg-2">#}
+            {#                <div class="form-group">#}
+            {#                    <label>Mothers Name</label> <br>#}
+            {#                    <input type="text" class="form-control" name="mother_surname" placeholder="Surname">#}
+            {#                </div>#}
+            {#            </div>#}
+            {#            <div class="col-lg-2 mt-5">#}
+            {#                <div class="form-group">#}
+            {#                    <label></label> <br>#}
+            {#                    <input type="text" class="form-control" name="mother_name" placeholder="First name ">#}
+            {#                </div>#}
+            {#            </div>#}
+            {#            <div class="col-lg-2 mt-5">#}
+            {#                <div class="form-group">#}
+            {#                    <label></label> <br>#}
+            {#                    <input type="text" class="form-control" name="mother_father_name" placeholder="Father’s name ">#}
+            {#                </div>#}
+            {#            </div>#}
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <label>Category</label> <br>
+                    <!-- <input type="text" class="form-control" placeholder=""> -->
+                    <select class="dproD" name="student_category">
+                        <option value="volvo">OTHER</option>
+                        <option value="volvo">OBC</option>
+                        <option value="saab">SC</option>
+                        <option value="fiat">NT</option>
+                        <option value="audi">OPEN</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Caste|Sub Caste</label> <br>
+                    <input type="text" class="form-control" name="student_caste" placeholder="Enter Caste name">
+                </div>
+            </div>
+
+        </div>
+
+        {#        <div class="row mt-20">#}
+        {#            <div class="col-lg-4">#}
+        {#                <div class="form-group">#}
+        {#                    <label>Date of Birth </label> <br>#}
+        {#                    <input type="date" class="form-control" placeholder="">#}
+        {#                </div>#}
+        {#            </div>#}
+        {##}
+        {#            <div class="col-lg-4">#}
+        {#                <div class="form-group">#}
+        {#                    <label>Category</label> <br>#}
+        {#                    <!-- <input type="text" class="form-control" placeholder=""> -->#}
+        {#                    <select class="dproD">#}
+        {#                        <option value="volvo">OTHER</option>#}
+        {#                        <option value="volvo">OBC</option>#}
+        {#                        <option value="saab">SC</option>#}
+        {#                        <option value="fiat">NT</option>#}
+        {#                        <option value="audi">OPEN</option>#}
+        {#                    </select>#}
+        {#                </div>#}
+        {#            </div>#}
+        {#            <div class="col-lg-4">#}
+        {#                <div class="form-group">#}
+        {#                    <label>Caste|Sub Caste</label> <br>#}
+        {#                    <input type="text" class="form-control" placeholder="Enter Caste name">#}
+        {#                </div>#}
+        {#            </div>#}
+        {#        </div>#}
+
+        <div class="row mt-20">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Gender</label> <br>
+                    <input type="radio" id="male" name="student_gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="student_gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="student_gender" value="other">
+                    <label for="other">Other</label>
+
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Religion</label> <br>
+                    <input type="text" class="form-control" name="student_religion" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Blood Group</label> <br>
+                    <input type="input" class="form-control" name="student_blood_group" placeholder="">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-20">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Present Address</label>
+                    <textarea name="student_present_addr" id="" cols="30" rows="0" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Telephone number</label> <br>
+                    <input type="number" class="form-control" name="student_telephone" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Mobile Number</label> <br>
+                    <input type="number" class="form-control" name="student_mobile" placeholder="">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mt-20">
+            {#            <div class="col-lg-3">#}
+            {#                <div class="form-group">#}
+            {#                    <label>Closest Landmark </label> <br>#}
+            {#                    <input type="text"  name="student_close_landmark" class="form-control" placeholder="">#}
+            {#                </div>#}
+            {#            </div>#}
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Previous school Attended </label> <br>
+                    <input type="text" name="student_previous_school" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Class</label> <br>
+                    <input type="text" name="student_previous_class" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Medium of instruction</label> <br>
+                    <input type="text" name="student_previous_medium" class="form-control" placeholder="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container mt-3 mb-1">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>PERSONAL INFORMATION</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container dvWhiteBG ">
+
+        <div class="row mt-20">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Closest Landmark </label> <br>
+                    <input type="text"  name="student_close_landmark" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Other languges Known</label> <br>
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Allergies if Any</label> <br>
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mt-20">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Alments</label> <br>
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Identification mark</label> <br>
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>After school hours child stays at home/Creche</label> <br>
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container mt-3 mb-1">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>FAMILY BACKGROUND </h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container dvWhiteBG ">
+        <div class="row mt-20">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label>Father Name</label> <br>
+                    <input type="text" class="form-control" placeholder="Surname">
+                </div>
+            </div>
+            <div class="col-lg-3 mt-5">
+                <div class="form-group">
+                    <label></label> <br>
+                    <input type="text" class="form-control" placeholder="First name ">
+                </div>
+            </div>
+            <div class="col-lg-3 mt-5">
+                <div class="form-group">
+                    <label></label> <br>
+                    <input type="text" class="form-control" placeholder="Father’s name ">
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label>Age</label> <br>
+                    <input type="number" class="form-control" placeholder="Age">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-20">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Qualification </label> <br>
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Place of work & Address</label> <br>
+                    <textarea name="" id="" cols="30" rows="0" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Designation</label> <br>
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-20">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Income per Annum </label> <br>
+                    <input type="number" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Telephone number</label> <br>
+                    <input type="number" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Mobile number</label> <br>
+                    <input type="number" class="form-control" placeholder="">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-20">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label>Mother Name</label> <br>
+                    <input type="text" class="form-control" placeholder="Surname">
+                </div>
+            </div>
+            <div class="col-lg-3 mt-5">
+                <div class="form-group">
+                    <label></label> <br>
+                    <input type="text" class="form-control" placeholder="First name ">
+                </div>
+            </div>
+            <div class="col-lg-3 mt-5">
+                <div class="form-group">
+                    <label></label> <br>
+                    <input type="text" class="form-control" placeholder="Father’s name ">
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label>Age</label> <br>
+                    <input type="number" class="form-control" placeholder="Age">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-20">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Qualification </label> <br>
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Place of work & Address</label> <br>
+                    <textarea name="" id="" cols="30" rows="0" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Designation</label> <br>
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-20">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Income per Annum </label> <br>
+                    <input type="number" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Telephone number</label> <br>
+                    <input type="number" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Mobile number</label> <br>
+                    <input type="number" class="form-control" placeholder="">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-20">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Contact Person()Emargency</label> <br>
+                    <input type="number" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Are You Single Parent</label> <br>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">YES</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">NO</label>
+
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Family:Joint/Nuclear</label> <br>
+                    <!-- <input type="text" class="form-control" placeholder=""> -->
+                    <select class="dproD">
+                        <option value="volvo">Joint</option>
+                        <option value="volvo">Nuclear</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-20">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Number of family members</label> <br>
+                    <input type="number" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Number of siblings</label> <br>
+                    <input type="number" class="form-control" placeholder="">
+                </div>
+            </div>
+
+        </div>
+
+        <table class="table table-bordered mt-20">
+            <thead>
+            <tr>
+
+                <th class="right_border " scope="col">Name of siblings</th>
+                <th class="right_border " scope="col">Age of siblings</th>
+                <th class="right_border " scope="col">School</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+
+                <td class="right_border ">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="">
+                    </div>
+                </td>
+                <td class="right_border ">
+                    <div class="form-group">
+                        <input type="number" class="form-control" placeholder="">
+                    </div>
+                </td>
+                <td class="right_border ">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+
+                <td class="right_border ">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="">
+                    </div>
+                </td>
+                <td class="right_border ">
+                    <div class="form-group">
+                        <input type="number" class="form-control" placeholder="">
+                    </div>
+                </td>
+                <td class="right_border ">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="">
+                    </div>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+
+        <div class="row mt-20">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>School bus Route Number</label> <br>
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Preffered Bus Stop</label> <br>
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-20">
+
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label>Students Photo </label> <br>
+                    <input type="file" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label>Original Birth Certificate of Child</label> <br>
+                    <input type="file" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label>Aadhar Card child, parents/ guardian </label> <br>
+                    <input type="file" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label>Blood Group Certificate of child </label> <br>
+                    <input type="file" class="form-control" placeholder="">
+                </div>
+            </div>
+
+        </div>
+        <div class="row mt-20">
+
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label>Fitness Certificate of Child </label> <br>
+                    <input type="file" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label>2 Photographs of child, 1each of parents/ guardian </label> <br>
+                    <input type="file" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label>Transfer Certificate of Child </label> <br>
+                    <input type="file" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label> Report Card of Previous School </label> <br>
+                    <input type="file" class="form-control" placeholder="">
+                </div>
+            </div>
+
+        </div>
+        <div class="row mt-20">
+
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label>Caste Certificate, if applicable </label> <br>
+                    <input type="file" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label>Current Electricity Bill </label> <br>
+                    <input type="file" class="form-control" placeholder="">
+                </div>
+            </div>
+            <br>
+
+        </div>
+        <br>
+        <div class="col-lg-6">
+            <label>Note</label>
+            <p>(Please carry original documents for Verification)</p>
+        </div>
+
+    </div>
+    <div class="container text-center mt-20 mt-5" style="margin-top: 50px; margin-bottom: 70px;">
+        <div class="row mt-20">
+
+            <div class="col-lg-4">
+            </div>
+            <div class="col-lg-4">
+            </div>
+
+            <div class="col-lg-4">
+                <div class="header-right-btn f-right  ml-15">
+                    <a href="login.html" class="header-btn">Save</a>
+                </div>
+                <div class="header-right-btn f-right  ml-15">
+                    <a href="login.html" class="header-btn">Print</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</form>
+{#<div class="container mt-3 mb-1">#}
+{#    <div class="row">#}
+{#        <div class="col-lg-12">#}
+{#            <h2>FOR OFFICE USE ONLY</h2>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+{#<div class="container dvWhiteBG ">#}
+{#    <div class="row mt-20">#}
+{#        <div class="col-lg-6">#}
+{#            <div class="form-group">#}
+{#                <label>Name of the student</label> <br>#}
+{#                <input type="text" class="form-control" placeholder="Surname">#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="col-lg-6">#}
+{#            <div class="form-group">#}
+{#                <label>Performance of admission interaction test:</label> <br>#}
+{#                <input type="text" class="form-control" placeholder="Surname">#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#    <div class="row mt-20">#}
+{#        <div class="col-lg-6">#}
+{#            <div class="form-group">#}
+{#                <label>Admission to standard</label> <br>#}
+{#                <input type="text" class="form-control" placeholder="Surname">#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="col-lg-6">#}
+{#            <div class="form-group">#}
+{#                <label>Division</label> <br>#}
+{#                <input type="text" class="form-control" placeholder="Surname">#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#    <div class="row mt-20">#}
+{#        <div class="col-lg-6">#}
+{#            <div class="form-group">#}
+{#                <label>Specific remarks</label> <br>#}
+{#                <input type="text" class="form-control" placeholder="Surname">#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{#    </div>#}
+{#</div>#}
+{#<div class="container">#}
+{#    • Original Birth Certificate of Child <br> • Aadhar Card of the child, parents/ guardian- Xerox <br> • Blood Group#}
+{#    Certificate of child <br> • Fitness Certificate of Child <br> • 2 Photographs of child, 1each of parents/ guardian#}
+{#    <br> • Original#}
+{#    School Leaving or Transfer Certificate of Child <br> • Original Report Card of Previous School <br> • Caste#}
+{#    Certificate, if applicable <br> • Current Electricity Bill <br>#}
+{#</div>#}
+{##}
+{#<div class="container text-center mt-20" style="margin-top: 100px;">#}
+{#    <div class="row">#}
+{#        <div class="col-lg-4">Accountant Sign</div>#}
+{#        <div class="col-lg-4">vice Principal Sign</div>#}
+{#        <div class="col-lg-4">Principal Sign</div>#}
+{#    </div>#}
+{#</div>#}
+{##}
+{#<div class="container text-center mt-20 mt-5" style="margin-top: 50px; margin-bottom: 70px;">#}
+{#    <div class="row mt-20">#}
+{##}
+{#        <div </form>class="col-lg-4">#}
+{#        </div>#}
+{#        <div class="col-lg-4">#}
+{#        </div>#}
+{##}
+{#        <div class="col-lg-4">#}
+{#            <div class="header-right-btn f-right  ml-15">#}
+{#                <a href="login.html" class="header-btn">Save</a>#}
+{#            </div>#}
+{#            <div class="header-right-btn f-right  ml-15">#}
+{#                <a href="login.html" class="header-btn">Print</a>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{#    </div>#}
+{#</div>#}
+
+
+<footer>
+    <div class="footer-wrappper footer-bg">
+
+        <div class="footer-area footer-padding">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-xl-5 col-lg-6 col-md-6 col-sm-8">
+                        <div class="single-footer-caption mb-50">
+                            <div class="single-footer-caption mb-30">
+
+                                <div class="footer-logo mb-25">
+                                    <a href="/"><img src="{% static 'assets/img/logo/junior.png' %}" alt=""
+                                                     width="50%"></a>
+                                </div>
+                                <div class="footer-tittle">
+                                    <div class="footer-pera">
+                                        <p>
+                                            Our set he for firmament morning sixth subdue today the darkness creeping
+                                            gathered divide our let god moving today. Moving in fourth air night bring
+                                            upon lesser subdue fowl male signs.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="footer-social">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-3 col-sm-4">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Quick Links </h4>
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">School</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Admission</a></li>
+                                    <li><a href="#">Events</a></li>
+                                    <li><a href="#">Gallery</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-3 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>About Us</h4>
+                                <ul>
+                                    <li><a href="#">Expert Teachers</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Testimonial</a></li>
+                                    <li><a href="#">Programing</a></li>
+                                    <li><a href="#">User Stories</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</footer>
+<div id="back-top">
+    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+</div>
+
+
+<script src="{% static 'assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+<script src="{% static 'assets/js/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'assets/js/slick.min.js' %}"></script>
+
+<script src="{% static 'assets/js/wow.min.js' %}"></script>
+<script src="{% static 'assets/js/animated.headline.js' %}"></script>
+<script src="{% static 'assets/js/jquery.magnific-popup.js' %}"></script>
+<script src="{% static 'assets/js/jquery.slicknav.min.js' %}"></script>
+
+<script src="{% static 'assets/js/gijgo.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.nice-select.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.barfiller.js' %}"></script>
+<script src="{% static 'assets/js/countdown.min.js' %}"></script>
+
+<script src="{% static 'assets/js/contact.js' %}"></script>
+<script src="{% static 'assets/js/jquery.form.js' %}"></script>
+<script src="{% static 'assets/js/jquery.validate.min.js' %}"></script>
+<script src="{% static 'assets/js/mail-script.js' %}"></script>
+<script src="{% static 'assets/js/jquery.ajaxchimp.min.js' %}"></script>
+
+<script src="{% static 'assets/js/plugins.js' %}"></script>
+<script src="{% static 'assets/js/main.js' %}"></script>
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-23581568-13');
+</script>
+</body>
+
+</html>

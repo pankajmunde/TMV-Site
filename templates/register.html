@@ -1,0 +1,185 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<!-- Mirrored from preview.colorlib.com/theme/kindergarten/register.html' %} by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 May 2021 14:21:47 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Education</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {#    <link rel="manifest" href="site.html' %}">#}
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/logo/junior.png' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/progressbar_barfiller.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/gijgo.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animated-headline.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+
+<body>
+
+<div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+            <div class="preloader-circle"></div>
+            <div class="preloader-img pere-text">
+                <img src="{% static 'assets/img/logo/junior.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<main class="login-body" data-vide-bg="{% static 'assets/img/login-bg.mp4' %}">
+
+    <form class="form-default" enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+
+        <div class="login-form">
+
+            <div class="logo-login">
+                <a href="index-2.html"> <img src="{% static 'assets/img/logo/junior.png' %}" alt=""
+                                             width="100px"></a>
+            </div>
+
+            <h2>Registration Here</h2>
+            {% for field in form %}
+                {% for error in field.errors %}
+                    {% if field.name == "username" %}
+                        <div class="form-input">
+                            <label for="id_username">Full name</label>
+                            {{ field }}
+                        </div>
+                        <p style="color: red">{{ error }}</p>
+                    {% endif %}
+                    {% if field.name == "email" %}
+                        <div class="form-input">
+                            <label for="id_email">Email Address</label>
+                            {{ field }}
+                        </div>
+                        <p style="color: red">{{ error }}</p>
+                    {% endif %}
+                    {% if field.name == "phone_number" %}
+                        <div class="form-input">
+                            <label for="id_phone_number">Mobile Number</label>
+                            {{ field }}
+                        </div>
+                        <p style="color: red">{{ error }}</p>
+                    {% endif %}
+                    {% if field.name == "password1" %}
+                        <div class="form-input">
+                            <label for="id_password1">Password</label>
+                            {{ field }}
+                        </div>
+                        <p style="color: red">{{ error }}</p>
+                    {% endif %}
+                    {% if field.name == "password2" %}
+                        <div class="form-input">
+                            <label for="id_password2">Confirm Password</label>
+                            {{ field }}
+                        </div>
+                        <p style="color: red">{{ error }}</p>
+                    {% endif %}
+
+                {% endfor %}
+
+                {% if not field.errors %}
+                    {% if field.name == "username" %}
+                        <div class="form-input">
+                            <label for="id_username">Full name</label>
+                            {{ field }}
+                        </div>
+                    {% endif %}
+                    {% if field.name == "email" %}
+                        <div class="form-input">
+                            <label for="id_email">Email Address</label>
+                            {{ field }}
+                        </div>
+                    {% endif %}
+                    {% if field.name == "phone_number" %}
+                        <div class="form-input">
+                            <label for="id_phone_number">Mobile Number</label>
+                            {{ field }}
+                        </div>
+                    {% endif %}
+                    {% if field.name == "password1" %}
+                        <div class="form-input">
+                            <label for="id_password1">Password</label>
+                            {{ field }}
+                        </div>
+                    {% endif %}
+                    {% if field.name == "password2" %}
+                        <div class="form-input">
+                            <label for="id_password2">Confirm Password</label>
+                            {{ field }}
+                        </div>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+
+
+            <div class="form-input pt-30">
+                <input type="submit" name="submit" value="Register">
+            </div>
+
+            <p style="color: white">Already have an account <a href="/accounts/login/" style="color: blue;">login</a>
+                here.</p>
+        </div>
+    </form>
+
+</main>
+<script src="{% static 'assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+
+<script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+<script src="{% static 'assets/js/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+<script src="{% static 'assets/js/jquery.slicknav.min.js' %}"></script>
+
+<script src="{% static 'assets/js/jquery.vide.js' %}"></script>
+
+<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'assets/js/slick.min.js' %}"></script>
+
+<script src="{% static 'assets/js/wow.min.js' %}"></script>
+<script src="{% static 'assets/js/animated.headline.js' %}"></script>
+<script src="{% static 'assets/js/jquery.magnific-popup.js' %}"></script>
+
+<script src="{% static 'assets/js/gijgo.min.js' %}"></script>
+
+<script src="{% static 'assets/js/jquery.nice-select.min.js' %}"></script>
+{#    <script src="{% static 'assets/js/jquery.sticky.html' %}"></script>#}
+
+<script src="{% static 'assets/js/jquery.barfiller.js' %}"></script>
+
+{#    <script src="{% static 'assets/js/jquery.counterup.min.html' %}"></script>#}
+{#    <script src="{% static 'assets/js/waypoints.min.html' %}"></script>#}
+{#    <script src="{% static 'assets/js/jquery.countdown.min.html' %}"></script>#}
+{#    <script src="{% static 'assets/js/hover-direction-snake.min.html' %}"></script>#}
+
+<script src="{% static 'assets/js/contact.js' %}"></script>
+<script src="{% static 'assets/js/jquery.form.js' %}"></script>
+<script src="{% static 'assets/js/jquery.validate.min.js' %}"></script>
+<script src="{% static 'assets/js/mail-script.js' %}"></script>
+<script src="{% static 'assets/js/jquery.ajaxchimp.min.js' %}"></script>
+
+<script src="{% static 'assets/js/plugins.js' %}"></script>
+<script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+<!-- Mirrored from preview.colorlib.com/theme/kindergarten/register.html' %} by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 May 2021 14:21:47 GMT -->
+
+</html>
