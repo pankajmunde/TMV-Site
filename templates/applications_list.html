@@ -300,8 +300,8 @@
                                                 </li>
                                             </ul>
                                         </li> -->
-                                        <li><a href="">Pri-Primary</a></li>
-                                        <li><a href="">Primary</a></li>
+                                        <li><a href="/admissions/">Pri-Primary</a></li>
+                                        <li><a href="/admissions/">Primary</a></li>
                                         <li><a href="">Rules and Regulation</a></li>
                                         <li><a href="">Application Receipt</a></li>
 
@@ -336,9 +336,37 @@
 
 
 <div>
-    {% for obj in objs %}
-        {{ obj }}
-    {% endfor %}
+    <div class="container text-center mt-20 mb-5">
+        <h2>Applications submitted by you</h2>
+    </div>
+    <table class="table">
+        <thead style="text-align: center;">
+        <tr>
+            <th scope="col">Sr.</th>
+            <th scope="col">Student Name</th>
+            <th scope="col">Submitted By</th>
+            <th scope="col">Standard</th>
+            <th scope="col">Date</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody style="text-align: center;">
+        {% for obj in objs %}
+
+            <tr>
+                <th scope="row">{{ forloop.counter }}</th>
+                <td>{{ obj }}</td>
+                <td>{{ obj.username }}</td>
+                <td>{{ obj.admission_std }}</td>
+                <td>{{ obj.created_date }}</td>
+                <td><a href="{% url 'admission_app:pdf-application-view' obj.pk %}" class="header-btn">Print</a></td>
+
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+    {{ obj }}
 </div>
 
 

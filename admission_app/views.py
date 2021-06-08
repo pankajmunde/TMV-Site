@@ -1,7 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseBadRequest
 from django.contrib.auth.decorators import login_required
 from .models import StorePrimaryAdmissionFormDetails
+
+from io import BytesIO
+from django.template.loader import get_template
+from xhtml2pdf import pisa
+from django.views.generic import View, ListView
+from datetime import datetime
 
 
 # Create your views here.
@@ -257,6 +263,38 @@ def applications_list_view(request):
     :return: Application Informations
     """
     if request.method == "GET":
-        all_applications = StorePrimaryAdmissionFormDetails.objects.filter(email=request.user.username)
+        all_applications = StorePrimaryAdmissionFormDetails.objects.filter(email=request.user.email)
 
-        return render(request, 'applications_list.html',context={"objs": all_applications})
+        print(all_applications)
+
+        return render(request, 'applications_list.html', context={"objs": all_applications})
+
+
+def render_to_pdf(template_src, context_dict={}):
+    template = get_template(template_src)
+    html = template.render(context_dict)
+    result = BytesIO()
+    pdf = pisa.pisaDocument(BytesIO(html.encode("ISO-8859-1")), result)
+    if not pdf.err:
+        return HttpResponse(result.getvalue(), content_type='application/pdf')
+    return None
+
+
+
+class AdmissionApplicationView(ListView):
+    def get(self, request, *args, **kwargs):
+        all_applications = StorePrimaryAdmissionFormDetails.objects.filter(email=request.user.email)
+
+        # print(all_applications)
+
+        return render(request, 'applications_list.html', context={"objs": all_applications})
+
+
+class GeneratePdf(View):
+    def get(self, request, *args, **kwargs):
+        pk = kwargs.get("pk")
+        application = get_object_or_404(StorePrimaryAdmissionFormDetails, pk=pk)
+
+        data = {"application":application}
+        pdf = render_to_pdf('../templates/pdf_template.html', data)
+        return HttpResponse(pdf, content_type='application/pdf')

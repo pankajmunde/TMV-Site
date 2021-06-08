@@ -1,0 +1,345 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Admission Form Receipt</title>
+    <style type="text/css">
+        body {
+            font-family: "DM Sans", sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            font-size: 16px;
+        }
+
+        .title span {
+            color: #007cae;
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+
+        p {
+            font-family: "DM Sans", sans-serif;
+            color: #5E5E5E;
+            font-size: 16px;
+            line-height: 30px;
+            margin-bottom: 0px;
+            font-weight: normal;
+        }
+
+        h2 {
+            font-family: "Fredoka One", cursive;
+            color: #423F8D;
+            margin-top: 0px;
+            font-style: normal;
+            margin-bottom: 0px;
+
+            font-weight: 400;
+        }
+
+        h3 {
+            font-family: "Fredoka One", cursive;
+            color: #423F8D;
+            margin-top: 0px;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        .infoHeading {
+            text-decoration: underline;
+            margin-bottom: 5px;
+        }
+
+        .tp-mr5 {
+            padding-top: 20px !important;
+
+        }
+    </style>
+</head>
+<body>
+<div class="text-center">
+    <p>Tilak Maharashtra Vidyalaya's Trust</p>
+    <h2>TILAK MAHARASHTRA VIDYALAYA'S </h2>
+    <p style="margin-top: 0px;">TMV Campus, Mukundnagar, Gultekadi, Pune-411037</p>
+    <h3>PRIMARY ADMISSION FORM</h3>
+</div>
+<hr>
+<br>
+<h2 class="infoHeading">GENERAL INFORMATION</h2>
+<br>
+<div>
+    <div>
+        <b class="tp-mr5">Admission for standard : </b>
+        <p style="display: inline-block; color: black">{{ application.admission_std }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Student Name : </b>
+        <p style="display: inline-block; color: black">{{ application.student_surname }} {{ application.student_name }} {{ application.student_father_name }}</p>
+        <img src="/static/Student_photos/Hdfc_Check.jpg" alt="Photo">
+    </div>
+
+    <div>
+        <b class="tp-mr5">Gender : </b>
+        <p style="display: inline-block; color: black">{{ application.student_gender }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Date of Birth : </b>
+        <p style="display: inline-block; color: black">{{ application.dob }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Blood Group : </b>
+        <p style="display: inline-block; color: black">{{ application.student_blood_group }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Religion : </b>
+        <p style="display: inline-block; color: black">{{ application.student_religion }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Category : </b>
+        <p style="display: inline-block; color: black">{{ application.student_category }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Caste|Sub Caste : </b>
+        <p style="display: inline-block; color: black">{{ application.student_caste }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Present Address : </b>
+        <p style="display: inline-block; color: black">{{ application.student_present_addr }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Telephone Number : </b>
+        <p style="display: inline-block; color: black">{{ application.student_telephone }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Mobile Number : </b>
+        <p style="display: inline-block; color: black">{{ application.student_mobile }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Previous school Attended : </b>
+        <p style="display: inline-block; color: black">{{ application.student_previous_school }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Class : </b>
+        <p style="display: inline-block; color: black">{{ application.student_previous_class }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Medium of instruction : </b>
+        <p style="display: inline-block; color: black">{{ application.student_previous_medium }}</p>
+    </div>
+    <h2 class="infoHeading">PERSONAL INFORMATION</h2>
+    <div>
+        <b class="tp-mr5">Closest Landmark : </b>
+        <p style="display: inline-block; color: black">{{ application.student_close_landmark }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Other languges Known : </b>
+        <p style="display: inline-block; color: black">{{ application.student_known_lang }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Allergies if Any : </b>
+        <p style="display: inline-block; color: black">{{ application.student_allergies }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Alments : </b>
+        <p style="display: inline-block; color: black">{{ application.student_alments }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Identification mark : </b>
+        <p style="display: inline-block; color: black">{{ application.student_id_mark }}</p>
+    </div>
+
+    <div>
+        <b class="tp-mr5">After school hours child stays at home/Creche : </b>
+        <p style="display: inline-block; color: black">{{ application.student_home_time }}</p>
+    </div>
+    <br>
+    <h2 class="infoHeading">FAMILY BACKGROUND</h2>
+    <br>
+    <div>
+        <b class="tp-mr5">Father Name : </b>
+        <p style="display: inline-block; color: black">{{ application.father_surname }} {{ application.father_name }} {{ application.father_father_name }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Age : </b>
+        <p style="display: inline-block; color: black">{{ application.father_age }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Qualification : </b>
+        <p style="display: inline-block; color: black">{{ application.father_education }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Place of work & Address : </b>
+        <p style="display: inline-block; color: black">{{ application.father_work_and_addr }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Designation : </b>
+        <p style="display: inline-block; color: black">{{ application.father_designation }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Income per Annum : </b>
+        <p style="display: inline-block; color: black">{{ application.father_income }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Telephone number : </b>
+        <p style="display: inline-block; color: black">{{ application.father_telephone }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Mobile number : </b>
+        <p style="display: inline-block; color: black">{{ application.father_mobile }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Mother Name : </b>
+        <p style="display: inline-block; color: black">{{ application.mother_surname }} {{ application.mother_name }} {{ application.mother_father_name }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Age : </b>
+        <p style="display: inline-block; color: black">{{ application.mother_age }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Qualification : </b>
+        <p style="display: inline-block; color: black">{{ application.mother_education }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Place of work & Address : </b>
+        <p style="display: inline-block; color: black">{{ application.mother_work_and_addr }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Designation : </b>
+        <p style="display: inline-block; color: black">{{ application.mother_designation }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Income per Annum : </b>
+        <p style="display: inline-block; color: black">{{ application.mother_income }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Telephone number : </b>
+        <p style="display: inline-block; color: black">{{ application.mother_telephone }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Mobile number : </b>
+        <p style="display: inline-block; color: black">{{ application.mother_mobile }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Contact Person (Emargency) : </b>
+        <p style="display: inline-block; color: black">{{ application.emargency_contact }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Are You Single Parent : </b>
+        <p style="display: inline-block; color: black">{{ application.single_parent }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Family:Joint/Nuclear : </b>
+        <p style="display: inline-block; color: black">{{ application.family_type }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Number of family members : </b>
+        <p style="display: inline-block; color: black">{{ application.family_members }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Number of siblings : </b>
+        <p style="display: inline-block; color: black">{{ application.siblings }}</p>
+    </div>
+    <div>
+        {#        <b class="tp-mr5">Name of siblings : </b>#}
+        <table class="table">
+            <thead style="text-align: center;">
+            <tr>
+                <th scope="row"></th>
+                <th scope="col">Name of siblings</th>
+                <th scope="col">Age of siblings</th>
+                <th scope="col">School</th>
+            </tr>
+            </thead>
+            <tbody style="text-align: center;">
+
+            <tr>
+                <th scope="row">1</th>
+                <td>{{ application.sibling1_name }}</td>
+                <td>{{ application.sibling1_age }}</td>
+                <td>{{ application.sibling1_school }}</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>{{ application.sibling2_name }}</td>
+                <td>{{ application.sibling2_age }}</td>
+                <td>{{ application.sibling2_school }}</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <b class="tp-mr5">School bus Route Number : </b>
+        <p style="display: inline-block; color: black">{{ application.bus_route_num }}</p>
+    </div>
+    <div>
+        <b class="tp-mr5">Preffered Bus Stop : </b>
+        <p style="display: inline-block; color: black">{{ application.bus_stop }}</p>
+    </div>
+
+    <br>
+    <div>
+        <b class="tp-mr5" style="color: red">Note </b>
+        <p style="display: inline-block; color: black">(Please carry original documents for Verification)</p>
+    </div>
+    <div>
+        <li>Original Birth Certificate of Child</li>
+        <li>Aadhar Card of the child, parents/ guardian- Xerox</li>
+        <li>Fitness Certificate of Child</li>
+        <li>2 Photographs of child, 1each of parents/ guardian</li>
+        <li>Original School Leaving or Transfer Certificate of Child</li>
+        <li>Original Report Card of Previous School</li>
+        <li>Caste Certificate, if applicable</li>
+        <li>Current Electricity Bill</li>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2 class="infoHeading">FOR OFFICE USE ONLY</h2>
+    <br>
+    <div>
+        <b class="tp-mr5">Name of the student : </b>
+    </div>
+    <br>
+    <div>
+        <b class="tp-mr5">Performance of admission interaction test: : </b>
+    </div>
+    <br>
+    <div>
+        <b class="tp-mr5">Admission to standard : </b>
+    </div>
+    <br>
+    <div>
+        <b class="tp-mr5">Division : </b>
+    </div>
+    <br>
+    <div>
+        <b class="tp-mr5">Specific remarks : </b>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <thead style="text-align: center;">
+    <table>
+        <tr>
+            <th scope="col">Accountant Sign</th>
+            <th scope="col">Vice Principal Sign</th>
+            <th scope="col">Principal Sign</th>
+        </tr>
+        </thead>
+    </table>
+
+
+</div>
+</body>
+</html>

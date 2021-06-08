@@ -1,10 +1,11 @@
 from django.db import models
-
+from django.utils.timezone import now
 
 # Create your models here.
 
 class StorePrimaryAdmissionFormDetails(models.Model):
     username = models.CharField(max_length=255)
+    created_date = models.DateTimeField(default=now)
     email = models.EmailField()
     admission_std = models.CharField(max_length=255, null=True)
     dob = models.CharField(max_length=255, null=True)
@@ -79,3 +80,6 @@ class StorePrimaryAdmissionFormDetails(models.Model):
     report_card = models.FileField(upload_to='Report_cards/')
     caste_certificate = models.FileField(upload_to='Caste_certificates/')
     electricity_bill = models.FileField(upload_to='Electricity_bill/')
+
+    def __str__(self):
+        return f"{self.student_surname} {self.student_name} {self.student_father_name}"
