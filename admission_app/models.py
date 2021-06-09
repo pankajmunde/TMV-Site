@@ -5,6 +5,7 @@ from django.utils.timezone import now
 
 class StorePrimaryAdmissionFormDetails(models.Model):
     username = models.CharField(max_length=255)
+    form_type = models.CharField(max_length=255)
     created_date = models.DateTimeField(default=now)
     email = models.EmailField()
     admission_std = models.CharField(max_length=255, null=True)

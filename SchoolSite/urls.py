@@ -24,7 +24,8 @@ import accounts.views as account_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', account_view.home_view, name='home'),
+    # path('', account_view.home_view, name='home'),
+    url(r'', include('main_site_app.urls')),
     url(r'^accounts/', include('accounts.urls')),
     url(r'^admissions/', include('admission_app.urls')),
     # path('admissions/', account_view.admissions_view, name='admissions'),

@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -8,459 +9,474 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.html">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/junior.png" width="50%">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/logo/junior.png' %}" width="50%">
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/slicknav.css">
-    <link rel="stylesheet" href="assets/css/progressbar_barfiller.css">
-    <link rel="stylesheet" href="assets/css/gijgo.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/animated-headline.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/progressbar_barfiller.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/gijgo.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animated-headline.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
 </head>
 
 <body>
-    <div id="preloader-active">
-        <div class="preloader d-flex align-items-center justify-content-center">
-            <div class="preloader-inner position-relative">
-                <div class="preloader-circle"></div>
-                <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/junior.png" alt="">
+<div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+            <div class="preloader-circle"></div>
+            <div class="preloader-img pere-text">
+                <img src="{% static 'assets/img/logo/junior.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<header>
+
+    <div class="header-area">
+        <div class="main-header ">
+            <div class="header-top d-none d-sm-block">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="d-flex justify-content-between flex-wrap align-items-center">
+                                <div class="header-info-left">
+                                    <ul>
+                                        <li><i class="fas fa-map-marker-alt"></i> TMV Colonu Mukund Nagar 37</li>
+                                        <li><i class="fas fa-phone-alt"></i> 020 2447 3117</li>
+                                    </ul>
+                                </div>
+                                <div class="header-info-right">
+                                    <ul class="header-social">
+                                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom  header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo">
+                                <a href="index-2.html"><img src="{% static 'assets/images1/tilak.png' %}" alt="" width="40%"></a>
+                                <!-- <a href="index-2.html"><img src="{% static 'assets/img/logo/junior.png' %}" alt="" width="100%"></a> -->
+
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10">
+
+                            <div class="main-menu f-right d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="index-2.html">Home</a></li>
+                                        <li><a href="">School</a>
+                                            <ul class="submenu">
+                                                <li>
+                                                    <a href="/attendance/">Attendance</a>
+                                                    <a href="/parents-participantion/">Parents Participantion</a>
+                                                    <a href="/general-rules/">General Rules</a>
+                                                    <a href="/holiday-list/"> Holiday List</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="/about/">About</a></li>
+                                        {#                                        <li><a href="">Admission</a></li>#}
+                                        <li><a href="/events/">Event </a></li>
+                                        <li><a href="">Gallery</a></li>
+                                        <li><a href="/contact/">Contact</a></li>
+                                        <li>
+                                            <div class="header-right-btn f-right  ml-15">
+                                                <a href="/accounts/login" class="header-btn">Enroll Now</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <header>
 
-        <div class="header-area">
-            <div class="main-header ">
-                <div class="header-top d-none d-sm-block">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="d-flex justify-content-between flex-wrap align-items-center">
-                                    <div class="header-info-left">
-                                        <ul>
-                                            <li><i class="fas fa-map-marker-alt"></i> TMV Colonu Mukund Nagar 37</li>
-                                            <li><i class="fas fa-phone-alt"></i> 020 2447 3117</li>
-                                        </ul>
-                                    </div>
-                                    <div class="header-info-right">
-                                        <ul class="header-social">
-                                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                            <li> <a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="header-bottom  header-sticky">
-                    <div class="container-fluid">
-                        <div class="row align-items-center">
+</header>
+<main>
 
-                            <div class="col-xl-2 col-lg-2">
-                                <div class="logo">
-                                    <a href="index-2.html"><img src="assets/images1/tilak.png" alt="" width="40%"></a>
-                                    <!-- <a href="index-2.html"><img src="assets/img/logo/junior.png" alt="" width="100%"></a> -->
+    <section class="slider-area slider-area2">
+        <div class="slider-active">
 
-                                </div>
-                            </div>
-                            <div class="col-xl-10 col-lg-10">
-
-                                <div class="main-menu f-right d-none d-lg-block">
-                                    <nav>
-                                        <ul id="navigation">
-                                            <li><a href="index-2.html">Home</a></li>
-                                            <li><a href="">School</a>
-                                                <ul class="submenu">
-                                                    <li>
-                                                        <a href="school_one.html">Attendance</a>
-                                                        <a href="school_one.html">Parents Participantion</a>
-                                                        <a href="school_two.html">General Rules</a>
-                                                        <a href="school_four.html"> Holiday List</a>
-
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="">Admission</a></li>
-                                            <li><a href="event.html">Event   </a></li>
-                                            <li><a href="">Gallery</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                            <li>
-                                                <div class="header-right-btn f-right  ml-15">
-                                                    <a href="login.html" class="header-btn">Enroll Now</a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </header>
-    <main>
-
-        <section class="slider-area slider-area2">
-            <div class="slider-active">
-
-                <div class="single-slider slider-height2 d-flex align-items-center">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-8 col-lg-11 col-md-12">
-                                <div class="hero__caption hero__caption2">
-                                    <h1 data-animation="bounceIn" data-delay="0.2s">Page three </h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="whole-wrap">
-            <div class="container box_1170">
-                <div class="section-top-border">
-                    <div class="section-tittle text-center mb-80">
-                        <h2>EXAMINATIONS</h2>
-                    </div>
-                    <table class="table table-bordered text-center">
-
-                        <tbody>
-                            <tr>
-                                <td>Unit Test - 1</td>
-                                <td>Term-1 Evaluation</td>
-                                <td>Unit Test - 2</td>
-                                <td>Final Evaluation</td>
-                                <td>Break for students</td>
-                                <td>Report Card & Books distribution</td>
-                                <td>New Academic Year</td>
-                            </tr>
-                            <tr>
-                                <td> 26th July to 4th August 2021</td>
-                                <td> 20th October to 29th October 2021</td>
-                                <td> 10th January to 20th January 2022</td>
-                                <td> 21st March to 30th March 2022</td>
-                                <td> 31st March to 17th April 2022</td>
-                                <td> 12th and 13th April 2022</td>
-                                <td> 18th April 2022</td>
-
-                            </tr>
-
-                        </tbody>
-                    </table>
-
-                    <!-- <div class="row">
-                        <div class="col-lg-4">
-                            <img src="assets/images1/Donation to poor/donate.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8">
-                            <h1>General Rules</h1>
-                            <p style="text-align: justify;">
-                                ❖ Child must communicate only in English <br> ❖ Child must carry his/her calendar and ID card every day. <br> ❖ Child’s hair should be combed properly & cut regularly, nails to be trimmed regularly. <br> ❖ Late comers,
-                                uniform defaulters, child not doing homework will be sent back home. <br> ❖ Girls should wear black hair band with regular and sports uniform.
-
-                            </p>
-                        </div>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <img src="assets/images1/Donation to poor/donate.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8">
-                            <h1>Books</h1>
-                            <p style="text-align: justify;">❖ Cover the books whit transparent cover and label it properly with marker. <br> ❖ Ensure that the child does his\her home work regularly. <br> ❖ Send books according to the timetable to reduce weight of school bag. <br> ❖
-                                Teach the child to keep the books neat and tidy. <br> ❖ There are two sets of notebooks. Send only one set for first term. Keep other notebooks for second term at home.
-
-                            </p>
-                        </div>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <img src="assets/images1/Donation to poor/donate.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8">
-                            <h1>School Timing</h1>
-                            <p style="text-align: justify;">
-                                ❖ Reporting time for school is 7.40 am <br> ❖ School timings are from 7.45 am to 2.10 pm <br> ❖ If the child is absent due to illness, a medical certificate should be submitted to the class teacher. <br> ❖ Please avoid
-                                absentee during exams <br> ❖ Do not send the child to school if they are suffering from illness or infection.
-
-                            </p>
-                        </div>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <img src="assets/images1/Donation to poor/donate.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8">
-                            <h1>SCHOOL FEES</h1>
-                            <p style="text-align: justify;">
-                                At the time of admission parents are advised to pay the following fees: <br> 1. Form Fees <br> 2. Registration Fees (Non refundable) <br> 3. School Kit Fees includes <br> - 1 regular uniform, 1 P.T uniform, 1 pair of socks,
-                                tie, belt. <br> - Text books and Notebooks for the entire year. <br> - Stationary for the entire year. <br> 1st Term Fee is due during Admission <br> 2nd Term Fee is due in the month of September.
-
-
-
-                            </p>
-                        </div>
-
-                    </div> -->
-                </div>
-            </div>
-        </div>
-        <div class="whole-wrap">
-            <div class="container box_1170">
-                <div class="section-top-border">
-                    <div class="section-tittle text-center mb-80">
-                        <p>**Schedule of examination for all Standards is tentative and is subject to change as per CBSE Board**</p>
-                        <h2>COMPETITIVE EXAMINATION</h2>
-
-                    </div>
-                    <table class="table table-bordered text-center">
-
-                        <tbody>
-                            <tr>
-                                <td>National Cyber Olympiad [NCO] Std 1st to 4th</td>
-                                <td>National Science Olympiad [NSO] Std 1st to 4th</td>
-                                <td>National Math Olympiad [NMO] Std 1st to 4th</td>
-                                <td>English Marathon Std 1st to 4th</td>
-                                <td>Camlin Art Contest Pre-Primary to 4th</td>
-                                <td>Hindi Rashtra Bhasha Pariksha</td>
-
-                            </tr>
-
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        <div class="whole-wrap">
-            <div class="container box_1170">
-                <div class="section-top-border">
-                    <div class="section-tittle text-center mb-80">
-                        <h2>ASSESSMENT, TESTS AND EXAMINATION</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <img src="assets/images1/Donation to poor/donate.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8">
-                            <h1>Asseessment</h1>
-                            <p style="text-align: justify;">
-                                ● Tests will be conducted according to scheduled Time Table
-                                <br> ● The average marks of the unit test, half yearly and final examination will be considered for promotion to next class
-                                <br> ● A pupil absent during any Test or examination will on no account be retested.
-                                <br> ● Cheating in an examination will result in a zero in the subject and if repeated, dismissal from the school
-                                <br> ● No student will be allowed to go home early after appearing for a test.
-                                <br> ● In the event of unit test/assessments having to be postponed owing to unavoidable circumstances, they will be conducted after the last test.
-                                <br> ● Failure in English will result in destination preceded by three strict warnings which will be strictly observed.
-
-                            </p>
-                        </div>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <img src="assets/images1/Donation to poor/donate.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8">
-                            <h1>Extra Curricular Activities</h1>
-                            <p style="text-align: justify;">
-                                ● The school has various clubs to enhance the personality of the student.
-                                <br> ● Physical education and Games are a compulsory part of the curriculum.
-                                <br> ● The school has Computer classes from STD 1 to 4.
-                                <br> ● Educational Tour is arranged every year for all the classes.
-
-                            </p>
-                        </div>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <img src="assets/images1/Donation to poor/donate.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8">
-                            <h1>Withdrawal</h1>
-                            <p style="text-align: justify;">
-                                ● No leaving certificate will be issued unless the parents or guardians make a request in writing in the prescribed form provided at the back of the school diary. <br> ● Once clear calendar month’s notice of withdrawal
-                                is required. If one month’s notice is not given, then a terms fee following that in which the child is withdrawn will be changed. <br> ● If the pupil is withdrawn in April/November the fees for May/December must be paid.
-
-                            </p>
-                        </div>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <img src="assets/images1/Donation to poor/donate.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8">
-                            <h1>Library Fees</h1>
-                            <p style="text-align: justify;">
-                                Books will be issued to the students during the regular library periods.In case of the book being lost the student will either have to replace it or pay for it.
-                            </p>
-                        </div>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <img src="assets/images1/Donation to poor/donate.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8">
-                            <h1>Transport</h1>
-                            <p style="text-align: justify;">
-                                Bus facility is available on fixed routes with designated stops. All students have to behave properly. Using the bus is a privilege and not a right. Students traveling by bus are required to follow the rules ● Respect the school bus driver and always
-                                follow their instructions.
-                                <br> ● Students must remain in their seat and passageway (aisle) must be clear.
-                                <br> ● Keep head, hands and feet inside the bus
-                                <br> ● Though utmost care is taken while transporting the children, the school will not be held responsible for any untoward incident.
-                                <br> In case of an emergency and the child has to leave school before school hours following procedure to be followed:
-                                <br> ● Written request from parents.
-                                <br> ● Permission slip obtained from the office and signed by the authorities too.
-
-
-                                <br>
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-    </main>
-    <footer>
-        <div class="footer-wrappper footer-bg">
-
-            <div class="footer-area footer-padding">
+            <div class="single-slider slider-height2 d-flex align-items-center">
                 <div class="container">
-                    <div class="row justify-content-between">
-                        <div class="col-xl-5 col-lg-6 col-md-6 col-sm-8">
-                            <div class="single-footer-caption mb-50">
-                                <div class="single-footer-caption mb-30">
-
-                                    <div class="footer-logo mb-25">
-                                        <a href="index-2.html"><img src="assets/img/logo/junior.png" alt="" width="50%"></a>
-                                    </div>
-                                    <div class="footer-tittle">
-                                        <div class="footer-pera">
-                                            <p>
-                                                Our set he for firmament morning sixth subdue today the darkness creeping gathered divide our let god moving today. Moving in fourth air night bring upon lesser subdue fowl male signs.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="footer-social">
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-3 col-md-3 col-sm-4">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>Quick Links </h4>
-                                    <ul>
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">School</a></li>
-                                        <li><a href="#">About</a></li>
-                                        <li><a href="#">Admission</a></li>
-                                        <li><a href="#">Events</a></li>
-                                        <li><a href="#">Gallery</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-3 col-md-3 col-sm-6">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>About Us</h4>
-                                    <ul>
-                                        <li><a href="#">Expert Teachers</a></li>
-                                        <li><a href="#">Privacy Policy</a></li>
-                                        <li><a href="#">Testimonial</a></li>
-                                        <li><a href="#">Programing</a></li>
-                                        <li><a href="#">User Stories</a></li>
-                                    </ul>
-                                </div>
+                    <div class="row">
+                        <div class="col-xl-8 col-lg-11 col-md-12">
+                            <div class="hero__caption hero__caption2">
+                                <h1 data-animation="bounceIn" data-delay="0.2s">Page three </h1>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
         </div>
-    </footer>
+    </section>
 
-    <div id="back-top">
-        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    <div class="whole-wrap">
+        <div class="container box_1170">
+            <div class="section-top-border">
+                <div class="section-tittle text-center mb-80">
+                    <h2>EXAMINATIONS</h2>
+                </div>
+                <table class="table table-bordered text-center">
+
+                    <tbody>
+                    <tr>
+                        <td>Unit Test - 1</td>
+                        <td>Term-1 Evaluation</td>
+                        <td>Unit Test - 2</td>
+                        <td>Final Evaluation</td>
+                        <td>Break for students</td>
+                        <td>Report Card & Books distribution</td>
+                        <td>New Academic Year</td>
+                    </tr>
+                    <tr>
+                        <td> 26th July to 4th August 2021</td>
+                        <td> 20th October to 29th October 2021</td>
+                        <td> 10th January to 20th January 2022</td>
+                        <td> 21st March to 30th March 2022</td>
+                        <td> 31st March to 17th April 2022</td>
+                        <td> 12th and 13th April 2022</td>
+                        <td> 18th April 2022</td>
+
+                    </tr>
+
+                    </tbody>
+                </table>
+
+                <!-- <div class="row">
+                    <div class="col-lg-4">
+                        <img src="{% static 'assets/images1/Donation to poor/donate.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-lg-8">
+                        <h1>General Rules</h1>
+                        <p style="text-align: justify;">
+                            ❖ Child must communicate only in English <br> ❖ Child must carry his/her calendar and ID card every day. <br> ❖ Child’s hair should be combed properly & cut regularly, nails to be trimmed regularly. <br> ❖ Late comers,
+                            uniform defaulters, child not doing homework will be sent back home. <br> ❖ Girls should wear black hair band with regular and sports uniform.
+
+                        </p>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="{% static 'assets/images1/Donation to poor/donate.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-lg-8">
+                        <h1>Books</h1>
+                        <p style="text-align: justify;">❖ Cover the books whit transparent cover and label it properly with marker. <br> ❖ Ensure that the child does his\her home work regularly. <br> ❖ Send books according to the timetable to reduce weight of school bag. <br> ❖
+                            Teach the child to keep the books neat and tidy. <br> ❖ There are two sets of notebooks. Send only one set for first term. Keep other notebooks for second term at home.
+
+                        </p>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="{% static 'assets/images1/Donation to poor/donate.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-lg-8">
+                        <h1>School Timing</h1>
+                        <p style="text-align: justify;">
+                            ❖ Reporting time for school is 7.40 am <br> ❖ School timings are from 7.45 am to 2.10 pm <br> ❖ If the child is absent due to illness, a medical certificate should be submitted to the class teacher. <br> ❖ Please avoid
+                            absentee during exams <br> ❖ Do not send the child to school if they are suffering from illness or infection.
+
+                        </p>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="{% static 'assets/images1/Donation to poor/donate.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-lg-8">
+                        <h1>SCHOOL FEES</h1>
+                        <p style="text-align: justify;">
+                            At the time of admission parents are advised to pay the following fees: <br> 1. Form Fees <br> 2. Registration Fees (Non refundable) <br> 3. School Kit Fees includes <br> - 1 regular uniform, 1 P.T uniform, 1 pair of socks,
+                            tie, belt. <br> - Text books and Notebooks for the entire year. <br> - Stationary for the entire year. <br> 1st Term Fee is due during Admission <br> 2nd Term Fee is due in the month of September.
+
+
+
+                        </p>
+                    </div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="whole-wrap">
+        <div class="container box_1170">
+            <div class="section-top-border">
+                <div class="section-tittle text-center mb-80">
+                    <p>**Schedule of examination for all Standards is tentative and is subject to change as per CBSE
+                        Board**</p>
+                    <h2>COMPETITIVE EXAMINATION</h2>
+
+                </div>
+                <table class="table table-bordered text-center">
+
+                    <tbody>
+                    <tr>
+                        <td>National Cyber Olympiad [NCO] Std 1st to 4th</td>
+                        <td>National Science Olympiad [NSO] Std 1st to 4th</td>
+                        <td>National Math Olympiad [NMO] Std 1st to 4th</td>
+                        <td>English Marathon Std 1st to 4th</td>
+                        <td>Camlin Art Contest Pre-Primary to 4th</td>
+                        <td>Hindi Rashtra Bhasha Pariksha</td>
+
+                    </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="whole-wrap">
+        <div class="container box_1170">
+            <div class="section-top-border">
+                <div class="section-tittle text-center mb-80">
+                    <h2>ASSESSMENT, TESTS AND EXAMINATION</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="{% static 'assets/images1/Donation to poor/donate.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-lg-8">
+                        <h1>Asseessment</h1>
+                        <p style="text-align: justify;">
+                            ● Tests will be conducted according to scheduled Time Table
+                            <br> ● The average marks of the unit test, half yearly and final examination will be
+                            considered for promotion to next class
+                            <br> ● A pupil absent during any Test or examination will on no account be retested.
+                            <br> ● Cheating in an examination will result in a zero in the subject and if repeated,
+                            dismissal from the school
+                            <br> ● No student will be allowed to go home early after appearing for a test.
+                            <br> ● In the event of unit test/assessments having to be postponed owing to unavoidable
+                            circumstances, they will be conducted after the last test.
+                            <br> ● Failure in English will result in destination preceded by three strict warnings which
+                            will be strictly observed.
+
+                        </p>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="{% static 'assets/images1/Donation to poor/donate.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-lg-8">
+                        <h1>Extra Curricular Activities</h1>
+                        <p style="text-align: justify;">
+                            ● The school has various clubs to enhance the personality of the student.
+                            <br> ● Physical education and Games are a compulsory part of the curriculum.
+                            <br> ● The school has Computer classes from STD 1 to 4.
+                            <br> ● Educational Tour is arranged every year for all the classes.
+
+                        </p>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="{% static 'assets/images1/Donation to poor/donate.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-lg-8">
+                        <h1>Withdrawal</h1>
+                        <p style="text-align: justify;">
+                            ● No leaving certificate will be issued unless the parents or guardians make a request in
+                            writing in the prescribed form provided at the back of the school diary. <br> ● Once clear
+                            calendar month’s notice of withdrawal
+                            is required. If one month’s notice is not given, then a terms fee following that in which
+                            the child is withdrawn will be changed. <br> ● If the pupil is withdrawn in April/November
+                            the fees for May/December must be paid.
+
+                        </p>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="{% static 'assets/images1/Donation to poor/donate.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-lg-8">
+                        <h1>Library Fees</h1>
+                        <p style="text-align: justify;">
+                            Books will be issued to the students during the regular library periods.In case of the book
+                            being lost the student will either have to replace it or pay for it.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="{% static 'assets/images1/Donation to poor/donate.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-lg-8">
+                        <h1>Transport</h1>
+                        <p style="text-align: justify;">
+                            Bus facility is available on fixed routes with designated stops. All students have to behave
+                            properly. Using the bus is a privilege and not a right. Students traveling by bus are
+                            required to follow the rules ● Respect the school bus driver and always
+                            follow their instructions.
+                            <br> ● Students must remain in their seat and passageway (aisle) must be clear.
+                            <br> ● Keep head, hands and feet inside the bus
+                            <br> ● Though utmost care is taken while transporting the children, the school will not be
+                            held responsible for any untoward incident.
+                            <br> In case of an emergency and the child has to leave school before school hours following
+                            procedure to be followed:
+                            <br> ● Written request from parents.
+                            <br> ● Permission slip obtained from the office and signed by the authorities too.
+
+
+                            <br>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
 
 
-    <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+</main>
+<footer>
+    <div class="footer-wrappper footer-bg">
 
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
+        <div class="footer-area footer-padding">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-xl-5 col-lg-6 col-md-6 col-sm-8">
+                        <div class="single-footer-caption mb-50">
+                            <div class="single-footer-caption mb-30">
 
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/animated.headline.js"></script>
-    <script src="assets/js/jquery.magnific-popup.js"></script>
-    <script src="assets/js/jquery.slicknav.min.js"></script>
+                                <div class="footer-logo mb-25">
+                                    <a href="index-2.html"><img src="{% static 'assets/img/logo/junior.png' %}" alt="" width="50%"></a>
+                                </div>
+                                <div class="footer-tittle">
+                                    <div class="footer-pera">
+                                        <p>
+                                            Our set he for firmament morning sixth subdue today the darkness creeping
+                                            gathered divide our let god moving today. Moving in fourth air night bring
+                                            upon lesser subdue fowl male signs.
+                                        </p>
+                                    </div>
+                                </div>
 
-    <script src="assets/js/gijgo.min.js"></script>
-    <script src="assets/js/jquery.nice-select.min.js"></script>
-    <script src="assets/js/jquery.barfiller.js"></script>
-    <script src="assets/js/countdown.min.js"></script>
+                                <div class="footer-social">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-3 col-sm-4">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Quick Links </h4>
+                                <ul>
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="/">School</a></li>
+                                    <li><a href="/about/">About</a></li>
+                                    <li><a href="/admissions/">Admission</a></li>
+                                    <li><a href="/events/">Events</a></li>
+                                    <li><a href="/gallery/">Gallery</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-3 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>About Us</h4>
+                                <ul>
+                                    <li><a href="#">Expert Teachers</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Testimonial</a></li>
+                                    <li><a href="#">Programing</a></li>
+                                    <li><a href="#">User Stories</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <script src="assets/js/contact.js"></script>
-    <script src="assets/js/jquery.form.js"></script>
-    <script src="assets/js/jquery.validate.min.js"></script>
-    <script src="assets/js/mail-script.js"></script>
-    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
 
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/main.js"></script>
+    </div>
+</footer>
 
-    <script>
-        window.dataLayer = window.dataLayer || [];
+<div id="back-top">
+    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+</div>
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
 
-        gtag('config', 'UA-23581568-13');
-    </script>
+<script src="{% static 'assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+<script src="{% static 'assets/js/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'assets/js/slick.min.js' %}"></script>
+
+<script src="{% static 'assets/js/wow.min.js' %}"></script>
+<script src="{% static 'assets/js/animated.headline.js' %}"></script>
+<script src="{% static 'assets/js/jquery.magnific-popup.js' %}"></script>
+<script src="{% static 'assets/js/jquery.slicknav.min.js' %}"></script>
+
+<script src="{% static 'assets/js/gijgo.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.nice-select.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.barfiller.js' %}"></script>
+<script src="{% static 'assets/js/countdown.min.js' %}"></script>
+
+<script src="{% static 'assets/js/contact.js' %}"></script>
+<script src="{% static 'assets/js/jquery.form.js' %}"></script>
+<script src="{% static 'assets/js/jquery.validate.min.js' %}"></script>
+<script src="{% static 'assets/js/mail-script.js' %}"></script>
+<script src="{% static 'assets/js/jquery.ajaxchimp.min.js' %}"></script>
+
+<script src="{% static 'assets/js/plugins.js' %}"></script>
+<script src="{% static 'assets/js/main.js' %}"></script>
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-23581568-13');
+</script>
 </body>
 
 </html>

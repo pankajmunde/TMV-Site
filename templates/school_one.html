@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -8,298 +9,313 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.html">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/junior.png" width="50%">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/logo/junior.png' %}" width="50%">
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/slicknav.css">
-    <link rel="stylesheet" href="assets/css/progressbar_barfiller.css">
-    <link rel="stylesheet" href="assets/css/gijgo.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/animated-headline.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/progressbar_barfiller.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/gijgo.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animated-headline.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
 </head>
 
 <body>
-    <div id="preloader-active">
-        <div class="preloader d-flex align-items-center justify-content-center">
-            <div class="preloader-inner position-relative">
-                <div class="preloader-circle"></div>
-                <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/junior.png" alt="">
+<div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+            <div class="preloader-circle"></div>
+            <div class="preloader-img pere-text">
+                <img src="{% static 'assets/img/logo/junior.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<header>
+
+    <div class="header-area">
+        <div class="main-header ">
+            <div class="header-top d-none d-sm-block">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="d-flex justify-content-between flex-wrap align-items-center">
+                                <div class="header-info-left">
+                                    <ul>
+                                        <li><i class="fas fa-map-marker-alt"></i> TMV Colonu Mukund Nagar 37</li>
+                                        <li><i class="fas fa-phone-alt"></i> 020 2447 3117</li>
+                                    </ul>
+                                </div>
+                                <div class="header-info-right">
+                                    <ul class="header-social">
+                                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom  header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo">
+                                <a href="index-2.html"><img src="{% static 'assets/images1/tilak.png' %}" alt=""
+                                                            width="40%"></a>
+                                <!-- <a href="index-2.html"><img src="{% static 'assets/img/logo/junior.png' %}" alt="" width="100%"></a> -->
+
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10">
+
+                            <div class="main-menu f-right d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="index-2.html">Home</a></li>
+                                        <li><a href="">School</a>
+                                            <ul class="submenu">
+                                                <li>
+                                                    <a href="/attendance/">Attendance</a>
+                                                    <a href="/parents-participantion/">Parents Participantion</a>
+                                                    <a href="/general-rules/">General Rules</a>
+                                                    <a href="/holiday-list/"> Holiday List</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="/about/">About</a></li>
+                                        {#                                        <li><a href="">Admission</a></li>#}
+                                        <li><a href="/events/">Event </a></li>
+                                        <li><a href="">Gallery</a></li>
+                                        <li><a href="/contact/">Contact</a></li>
+                                        <li>
+                                            <div class="header-right-btn f-right  ml-15">
+                                                <a href="/accounts/login" class="header-btn">Enroll Now</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <header>
 
-        <div class="header-area">
-            <div class="main-header ">
-                <div class="header-top d-none d-sm-block">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="d-flex justify-content-between flex-wrap align-items-center">
-                                    <div class="header-info-left">
-                                        <ul>
-                                            <li><i class="fas fa-map-marker-alt"></i> TMV Colonu Mukund Nagar 37</li>
-                                            <li><i class="fas fa-phone-alt"></i> 020 2447 3117</li>
-                                        </ul>
-                                    </div>
-                                    <div class="header-info-right">
-                                        <ul class="header-social">
-                                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                            <li> <a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="header-bottom  header-sticky">
-                    <div class="container-fluid">
-                        <div class="row align-items-center">
+</header>
+<main>
 
-                            <div class="col-xl-2 col-lg-2">
-                                <div class="logo">
-                                    <a href="index-2.html"><img src="assets/images1/tilak.png" alt="" width="40%"></a>
-                                    <!-- <a href="index-2.html"><img src="assets/img/logo/junior.png" alt="" width="100%"></a> -->
+    <section class="slider-area slider-area2">
+        <div class="slider-active">
 
-                                </div>
-                            </div>
-                            <div class="col-xl-10 col-lg-10">
-
-                                <div class="main-menu f-right d-none d-lg-block">
-                                    <nav>
-                                        <ul id="navigation">
-                                            <li><a href="index-2.html">Home</a></li>
-                                            <li><a href="">School</a>
-                                                <ul class="submenu">
-                                                    <li>
-                                                        <a href="school_one.html">Attendance</a>
-                                                        <a href="school_one.html">Parents Participantion</a>
-                                                        <a href="school_two.html">General Rules</a>
-                                                        <a href="school_four.html"> Holiday List</a>
-
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="">Admission</a></li>
-                                            <li><a href="event.html">Event   </a></li>
-                                            <li><a href="">Gallery</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                            <li>
-                                                <div class="header-right-btn f-right  ml-15">
-                                                    <a href="login.html" class="header-btn">Enroll Now</a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </header>
-    <main>
-
-        <section class="slider-area slider-area2">
-            <div class="slider-active">
-
-                <div class="single-slider slider-height2 d-flex align-items-center">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-8 col-lg-11 col-md-12">
-                                <div class="hero__caption hero__caption2">
-                                    <h1 data-animation="bounceIn" data-delay="0.2s">Page One </h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="whole-wrap">
-            <div class="container box_1170">
-                <div class="section-top-border">
-                    <div class="section-tittle text-center mb-80">
-                        <h2>Our Event</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <img src="assets/images1/Donation to poor/donate.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8">
-                            <h1>Attendance</h1>
-                            <p style="text-align: justify;">
-                                ❖ All Pupils should compulsorily be present on the school re opening day and last day. Non availability of transport facility will not be accepted as a reason for joining school late unless prior permission is obtained. <br>                                ❖In case of illness, on returning school pupil must bring note in calendar from his parents certifying the fact. Failure in sending the same the pupil will be sent home even during school hours. <br> ❖ Pupils suffering
-                                from any infection/disease should produce medical certificate for the same. Pupils must look after their own belongings. <br> ❖ Pupils should carry labels of their respective names, standard on their belongings i.e uniform,
-                                bags, raincoat, notebooks etc. <br>❖ Not advisable for any child to carry cash or valuable articles with them to school premises.
-                            </p>
-                        </div>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <img src="assets/images1/Donation to poor/donate.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8">
-                            <h1>Uniform</h1>
-                            <p style="text-align: justify;">
-                                ❖ Pupil is advised to wear clean and ironed school uniform during school days, school functions, examinations. <br> ❖ P.T Uniform to be worn on mass drill days.
-                            </p>
-                        </div>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <img src="assets/images1/Donation to poor/donate.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8">
-                            <h1>Parents participation</h1>
-                            <p style="text-align: justify;">
-                                ❖ Homework given in diaries to be signed by parents as a proof of having read it. <br> ❖ Parents/guardians/attendant cannot go to class and meet the pupil directly during school hours for any reason. <br> ❖ Parents can
-                                meet teachers by prior appointment only on Saturday. <br> ❖ It is the duty of the Parent to see that the child comes to school with his/her bags, clean uniform, books and in time for class. <br> ❖ Leave record to be sent
-                                by the parents mandatorily on account of casual leaves taken by the child. <br> ❖ Parents must check and sign messages sent in their child’s diary.
-
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-    </main>
-    <footer>
-        <div class="footer-wrappper footer-bg">
-
-            <div class="footer-area footer-padding">
+            <div class="single-slider slider-height2 d-flex align-items-center">
                 <div class="container">
-                    <div class="row justify-content-between">
-                        <div class="col-xl-5 col-lg-6 col-md-6 col-sm-8">
-                            <div class="single-footer-caption mb-50">
-                                <div class="single-footer-caption mb-30">
-
-                                    <div class="footer-logo mb-25">
-                                        <a href="index-2.html"><img src="assets/img/logo/junior.png" alt="" width="50%"></a>
-                                    </div>
-                                    <div class="footer-tittle">
-                                        <div class="footer-pera">
-                                            <p>
-                                                Our set he for firmament morning sixth subdue today the darkness creeping gathered divide our let god moving today. Moving in fourth air night bring upon lesser subdue fowl male signs.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="footer-social">
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-3 col-md-3 col-sm-4">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>Quick Links </h4>
-                                    <ul>
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">School</a></li>
-                                        <li><a href="#">About</a></li>
-                                        <li><a href="#">Admission</a></li>
-                                        <li><a href="#">Events</a></li>
-                                        <li><a href="#">Gallery</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-3 col-md-3 col-sm-6">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>About Us</h4>
-                                    <ul>
-                                        <li><a href="#">Expert Teachers</a></li>
-                                        <li><a href="#">Privacy Policy</a></li>
-                                        <li><a href="#">Testimonial</a></li>
-                                        <li><a href="#">Programing</a></li>
-                                        <li><a href="#">User Stories</a></li>
-                                    </ul>
-                                </div>
+                    <div class="row">
+                        <div class="col-xl-8 col-lg-11 col-md-12">
+                            <div class="hero__caption hero__caption2">
+                                <h1 data-animation="bounceIn" data-delay="0.2s">Page One </h1>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
         </div>
-    </footer>
+    </section>
 
-    <div id="back-top">
-        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    <div class="whole-wrap">
+        <div class="container box_1170">
+            <div class="section-top-border">
+                <div class="section-tittle text-center mb-80">
+                    <h2>Our Event</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="{% static 'assets/images1/Donation to poor/donate.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-lg-8">
+                        <h1>Attendance</h1>
+                        <p style="text-align: justify;">
+                            ❖ All Pupils should compulsorily be present on the school re opening day and last day. Non
+                            availability of transport facility will not be accepted as a reason for joining school late
+                            unless prior permission is obtained. <br> ❖In case of illness, on returning school pupil
+                            must bring note in calendar from his parents certifying the fact. Failure in sending the
+                            same the pupil will be sent home even during school hours. <br> ❖ Pupils suffering
+                            from any infection/disease should produce medical certificate for the same. Pupils must look
+                            after their own belongings. <br> ❖ Pupils should carry labels of their respective names,
+                            standard on their belongings i.e uniform,
+                            bags, raincoat, notebooks etc. <br>❖ Not advisable for any child to carry cash or valuable
+                            articles with them to school premises.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="{% static 'assets/images1/Donation to poor/donate.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-lg-8">
+                        <h1>Uniform</h1>
+                        <p style="text-align: justify;">
+                            ❖ Pupil is advised to wear clean and ironed school uniform during school days, school
+                            functions, examinations. <br> ❖ P.T Uniform to be worn on mass drill days.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="{% static 'assets/images1/Donation to poor/donate.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-lg-8">
+                        <h1>Parents participation</h1>
+                        <p style="text-align: justify;">
+                            ❖ Homework given in diaries to be signed by parents as a proof of having read it. <br> ❖
+                            Parents/guardians/attendant cannot go to class and meet the pupil directly during school
+                            hours for any reason. <br> ❖ Parents can
+                            meet teachers by prior appointment only on Saturday. <br> ❖ It is the duty of the Parent to
+                            see that the child comes to school with his/her bags, clean uniform, books and in time for
+                            class. <br> ❖ Leave record to be sent
+                            by the parents mandatorily on account of casual leaves taken by the child. <br> ❖ Parents
+                            must check and sign messages sent in their child’s diary.
+
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
 
 
-    <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+</main>
+<footer>
+    <div class="footer-wrappper footer-bg">
 
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
+        <div class="footer-area footer-padding">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-xl-5 col-lg-6 col-md-6 col-sm-8">
+                        <div class="single-footer-caption mb-50">
+                            <div class="single-footer-caption mb-30">
 
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/animated.headline.js"></script>
-    <script src="assets/js/jquery.magnific-popup.js"></script>
-    <script src="assets/js/jquery.slicknav.min.js"></script>
+                                <div class="footer-logo mb-25">
+                                    <a href="index-2.html"><img src="{% static 'assets/img/logo/junior.png' %}" alt=""
+                                                                width="50%"></a>
+                                </div>
+                                <div class="footer-tittle">
+                                    <div class="footer-pera">
+                                        <p>
+                                            Our set he for firmament morning sixth subdue today the darkness creeping
+                                            gathered divide our let god moving today. Moving in fourth air night bring
+                                            upon lesser subdue fowl male signs.
+                                        </p>
+                                    </div>
+                                </div>
 
-    <script src="assets/js/gijgo.min.js"></script>
-    <script src="assets/js/jquery.nice-select.min.js"></script>
-    <script src="assets/js/jquery.barfiller.js"></script>
-    <script src="assets/js/countdown.min.js"></script>
+                                <div class="footer-social">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-3 col-sm-4">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Quick Links </h4>
+                                <ul>
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="/">School</a></li>
+                                    <li><a href="/about/">About</a></li>
+                                    <li><a href="/admissions/">Admission</a></li>
+                                    <li><a href="/events/">Events</a></li>
+                                    <li><a href="/gallery/">Gallery</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-3 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>About Us</h4>
+                                <ul>
+                                    <li><a href="#">Expert Teachers</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Testimonial</a></li>
+                                    <li><a href="#">Programing</a></li>
+                                    <li><a href="#">User Stories</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <script src="assets/js/contact.js"></script>
-    <script src="assets/js/jquery.form.js"></script>
-    <script src="assets/js/jquery.validate.min.js"></script>
-    <script src="assets/js/mail-script.js"></script>
-    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
 
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/main.js"></script>
+    </div>
+</footer>
 
-    <script>
-        window.dataLayer = window.dataLayer || [];
+<div id="back-top">
+    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+</div>
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
 
-        gtag('config', 'UA-23581568-13');
-    </script>
+<script src="{% static 'assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+<script src="{% static 'assets/js/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'assets/js/slick.min.js' %}"></script>
+
+<script src="{% static 'assets/js/wow.min.js' %}"></script>
+<script src="{% static 'assets/js/animated.headline.js' %}"></script>
+<script src="{% static 'assets/js/jquery.magnific-popup.js' %}"></script>
+<script src="{% static 'assets/js/jquery.slicknav.min.js' %}"></script>
+
+<script src="{% static 'assets/js/gijgo.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.nice-select.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.barfiller.js' %}"></script>
+<script src="{% static 'assets/js/countdown.min.js' %}"></script>
+
+<script src="{% static 'assets/js/contact.js' %}"></script>
+<script src="{% static 'assets/js/jquery.form.js' %}"></script>
+<script src="{% static 'assets/js/jquery.validate.min.js' %}"></script>
+<script src="{% static 'assets/js/mail-script.js' %}"></script>
+<script src="{% static 'assets/js/jquery.ajaxchimp.min.js' %}"></script>
+
+<script src="{% static 'assets/js/plugins.js' %}"></script>
+<script src="{% static 'assets/js/main.js' %}"></script>
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-23581568-13');
+</script>
 </body>
 
 </html>

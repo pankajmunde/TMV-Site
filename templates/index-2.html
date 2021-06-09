@@ -88,19 +88,19 @@
                                         <li><a href="">School</a>
                                             <ul class="submenu">
                                                 <li>
-                                                    <a href="school_one.html">Attendance</a>
-                                                    <a href="school_one.html">Parents Participantion</a>
-                                                    <a href="school_two.html">General Rules</a>
-                                                    <a href="school_four.html"> Holiday List</a>
+                                                    <a href="/attendance/">Attendance</a>
+                                                    <a href="/parents-participantion/">Parents Participantion</a>
+                                                    <a href="/general-rules/">General Rules</a>
+                                                    <a href="/holiday-list/"> Holiday List</a>
 
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li><a href="about.html">About</a></li>
-                                        {#                                            <li><a href="">Admission</a></li>#}
-                                        <li><a href="event.html">Event </a></li>
+                                        <li><a href="/about/">About</a></li>
+                                        {#                                        <li><a href="">Admission</a></li>#}
+                                        <li><a href="/events/">Event </a></li>
                                         <li><a href="">Gallery</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="/contact/">Contact</a></li>
                                         <li>
                                             <div class="header-right-btn f-right  ml-15">
                                                 <a href="/accounts/login" class="header-btn">Enroll Now</a>
@@ -206,65 +206,63 @@
                 <div class="section-tittle text-center mb-80">
                     <h2>Our Event</h2>
                 </div>
-                <div class="row">
-                    <div class="col-lg-3">
-                        <img src="{% static 'assets/images1/Donation to poor/donate.jpg' %}" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-lg-7">
+                {% for event in events %}
+                    <div class="row mt-30">
+                        <div class="col-lg-3">
+                            <img src="media/{{ event.event_photo }}" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-lg-7">
 
-                        <h1>Donation to poor</h1>
-                        <p class="fa fa-map-marker"> Pune Maharashtra</p>
+                            <h1>{{ event.event_title }}</h1>
+                            <p class="fa fa-map-marker"> {{ event.event_location }}</p>
 
-                        <p style="text-align: justify;">The senior kg students went to give the collected material to
-                            the home for needy. When the values of kindness, compassion and giving are rooted since such
-                            an early age in you. The senior kg students went to give the collected
-                            material to the home for needy. When the values of kindness, compassion and giving are
-                            rooted since such an early age in you </p>
-                    </div>
-                    <div class="col-lg-2">
-                        <a href="event.html" class="header-btn mt-5" style="margin-top: 80px;">Read More</a>
+                            <p style="text-align: justify;">{{ event.event_info }} </p>
+                        </div>
+                        <div class="col-lg-2">
+                            <a href="/events/" class="header-btn mt-5" style="margin-top: 80px;">Read More</a>
 
+                        </div>
                     </div>
-                </div>
-                <div class="row mt-30">
-                    <div class="col-lg-3">
-                        <img src="{% static 'assets/images1/wari/68863781_530410597699955_5686716560249454592_n.jpg' %}"
-                             alt="" class="img-fluid">
-                    </div>
-                    <div class="col-lg-7">
-
-                        <h1>Palkhi Festival</h1>
-                        <p class="fa fa-map-marker"> Pune Maharashtra</p>
-
-                        <p style="text-align: justify;">Palkhi festival showcases a distinctive feature of the
-                            Maharashtra culture to make the children aware of the importance of the traditions along
-                            with modern culture.</p>
-                    </div>
-                    <div class="col-lg-2">
-                        <a href="event.html" class="header-btn mt-5" style="margin-top: 80px;">Read More</a>
-
-                    </div>
-                </div>
-                <div class="row mt-30">
-                    <div class="col-lg-3">
-                        <img src="{% static 'assets/images1/Yoga day/64738164_494394454634903_3669148603437285376_n.jpg' %}"
-                             alt="" class="img-fluid">
-                    </div>
-                    <div class="col-lg-7">
-
-                        <h1>Yoga Day</h1>
-                        <p class="fa fa-map-marker"> Pune Maharashtra</p>
-
-                        <p style="text-align: justify;">Yoga day was celebrated by performing basic yoga by students.
-                            Teachers explained about importance of yoga in daily life.</p>
-                    </div>
-                    <div class="col-lg-2">
-                        <a href="event.html" class="header-btn mt-5" style="margin-top: 80px;">Read More</a>
-
-                    </div>
-                </div>
+                {% endfor %}
+                {#                <div class="row mt-30">#}
+                {#                    <div class="col-lg-3">#}
+                {#                        <img src="{% static 'assets/images1/wari/68863781_530410597699955_5686716560249454592_n.jpg' %}"#}
+                {#                             alt="" class="img-fluid">#}
+                {#                    </div>#}
+                {#                    <div class="col-lg-7">#}
+                {##}
+                {#                        <h1>Palkhi Festival</h1>#}
+                {#                        <p class="fa fa-map-marker"> Pune Maharashtra</p>#}
+                {##}
+                {#                        <p style="text-align: justify;">Palkhi festival showcases a distinctive feature of the#}
+                {#                            Maharashtra culture to make the children aware of the importance of the traditions along#}
+                {#                            with modern culture.</p>#}
+                {#                    </div>#}
+                {#                    <div class="col-lg-2">#}
+                {#                        <a href="/events/" class="header-btn mt-5" style="margin-top: 80px;">Read More</a>#}
+                {##}
+                {#                    </div>#}
+                {#                </div>#}
+                {#                <div class="row mt-30">#}
+                {#                    <div class="col-lg-3">#}
+                {#                        <img src="{% static 'assets/images1/Yoga day/64738164_494394454634903_3669148603437285376_n.jpg' %}"#}
+                {#                             alt="" class="img-fluid">#}
+                {#                    </div>#}
+                {#                    <div class="col-lg-7">#}
+                {##}
+                {#                        <h1>Yoga Day</h1>#}
+                {#                        <p class="fa fa-map-marker"> Pune Maharashtra</p>#}
+                {##}
+                {#                        <p style="text-align: justify;">Yoga day was celebrated by performing basic yoga by students.#}
+                {#                            Teachers explained about importance of yoga in daily life.</p>#}
+                {#                    </div>#}
+                {#                    <div class="col-lg-2">#}
+                {#                        <a href="/events/" class="header-btn mt-5" style="margin-top: 80px;">Read More</a>#}
+                {##}
+                {#                    </div>#}
             </div>
         </div>
+    </div>
     </div>
 
 
@@ -469,116 +467,117 @@
             </div>
             <div class="c-row">
                 <div class="team-active">
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="single-team mb-30 text-center">
-                            <div class="team-img">
-                                <img src="{% static 'assets/img/gallery/team1.png' %}" alt="">
-                                <div class="team-caption">
+                    {% for teacher in teachers %}
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="single-team mb-30 text-center">
+                                <div class="team-img">
+                                    <img src="/media/{{ teacher.photo }}" alt="">
+                                    <div class="team-caption">
 
-                                    <div class="team-social">
-                                        <ul>
-                                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        </ul>
+                                        <div class="team-social">
+                                            <ul>
+                                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="team-info">
-                                <h3><a href="#">Mr. Jacson Clay</a></h3>
-                                <p>Sports Instructor</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="single-team mb-30 text-center">
-                            <div class="team-img">
-                                <img src="{% static 'assets/img/gallery/team2.png' %}" alt="">
-                                <div class="team-caption">
-
-                                    <div class="team-social">
-                                        <ul>
-                                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        </ul>
-                                    </div>
+                                <div class="team-info">
+                                    <h3><a href="#">Mr. {{ teacher.name }}</a></h3>
+                                    <p>{{ teacher.experties }}</p>
                                 </div>
                             </div>
-                            <div class="team-info">
-                                <h3><a href="#">Mr. Jacson Clay</a></h3>
-                                <p>Sports Instructor</p>
-                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="single-team mb-30 text-center">
-                            <div class="team-img">
-                                <img src="{% static 'assets/img/gallery/team3.png' %}" alt="">
-                                <div class="team-caption">
-
-                                    <div class="team-social">
-                                        <ul>
-                                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-info">
-                                <h3><a href="#">Buster Hyman</a></h3>
-                                <p>Sports Instructor</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="single-team mb-30 text-center">
-                            <div class="team-img">
-                                <img src="{% static 'assets/img/gallery/team2.png' %}" alt="">
-                                <div class="team-caption">
-
-                                    <div class="team-social">
-                                        <ul>
-                                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-info">
-                                <h3><a href="#">Amilia Kauly</a></h3>
-                                <p>Sports Instructor</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="single-team mb-30 text-center">
-                            <div class="team-img">
-                                <img src="{% static 'assets/img/gallery/team3.png' %}" alt="">
-                                <div class="team-caption">
-
-                                    <div class="team-social">
-                                        <ul>
-                                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-info">
-                                <h3><a href="#">Mr. Jacson Clay</a></h3>
-                                <p>Sports Instructor</p>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
+                    {#                    <div class="col-lg-3 col-md-4 col-sm-6">#}
+                    {#                        <div class="single-team mb-30 text-center">#}
+                    {#                            <div class="team-img">#}
+                    {#                                <img src="{% static 'assets/img/gallery/team2.png' %}" alt="">#}
+                    {#                                <div class="team-caption">#}
+                    {##}
+                    {#                                    <div class="team-social">#}
+                    {#                                        <ul>#}
+                    {#                                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>#}
+                    {#                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>#}
+                    {#                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>#}
+                    {#                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>#}
+                    {#                                        </ul>#}
+                    {#                                    </div>#}
+                    {#                                </div>#}
+                    {#                            </div>#}
+                    {#                            <div class="team-info">#}
+                    {#                                <h3><a href="#">Mr. Jacson Clay</a></h3>#}
+                    {#                                <p>Sports Instructor</p>#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {#                    </div>#}
+                    {#                    <div class="col-lg-3 col-md-4 col-sm-6">#}
+                    {#                        <div class="single-team mb-30 text-center">#}
+                    {#                            <div class="team-img">#}
+                    {#                                <img src="{% static 'assets/img/gallery/team3.png' %}" alt="">#}
+                    {#                                <div class="team-caption">#}
+                    {##}
+                    {#                                    <div class="team-social">#}
+                    {#                                        <ul>#}
+                    {#                                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>#}
+                    {#                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>#}
+                    {#                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>#}
+                    {#                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>#}
+                    {#                                        </ul>#}
+                    {#                                    </div>#}
+                    {#                                </div>#}
+                    {#                            </div>#}
+                    {#                            <div class="team-info">#}
+                    {#                                <h3><a href="#">Buster Hyman</a></h3>#}
+                    {#                                <p>Sports Instructor</p>#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {#                    </div>#}
+                    {#                    <div class="col-lg-3 col-md-4 col-sm-6">#}
+                    {#                        <div class="single-team mb-30 text-center">#}
+                    {#                            <div class="team-img">#}
+                    {#                                <img src="{% static 'assets/img/gallery/team2.png' %}" alt="">#}
+                    {#                                <div class="team-caption">#}
+                    {##}
+                    {#                                    <div class="team-social">#}
+                    {#                                        <ul>#}
+                    {#                                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>#}
+                    {#                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>#}
+                    {#                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>#}
+                    {#                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>#}
+                    {#                                        </ul>#}
+                    {#                                    </div>#}
+                    {#                                </div>#}
+                    {#                            </div>#}
+                    {#                            <div class="team-info">#}
+                    {#                                <h3><a href="#">Amilia Kauly</a></h3>#}
+                    {#                                <p>Sports Instructor</p>#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {#                    </div>#}
+                    {#                    <div class="col-lg-3 col-md-4 col-sm-6">#}
+                    {#                        <div class="single-team mb-30 text-center">#}
+                    {#                            <div class="team-img">#}
+                    {#                                <img src="{% static 'assets/img/gallery/team3.png' %}" alt="">#}
+                    {#                                <div class="team-caption">#}
+                    {##}
+                    {#                                    <div class="team-social">#}
+                    {#                                        <ul>#}
+                    {#                                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>#}
+                    {#                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>#}
+                    {#                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>#}
+                    {#                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>#}
+                    {#                                        </ul>#}
+                    {#                                    </div>#}
+                    {#                                </div>#}
+                    {#                            </div>#}
+                    {#                            <div class="team-info">#}
+                    {#                                <h3><a href="#">Mr. Jacson Clay</a></h3>#}
+                    {#                                <p>Sports Instructor</p>#}
+                    {#                            </div>#}
+                    {#                        </div>#}
                 </div>
             </div>
         </div>
@@ -716,12 +715,12 @@
                             <div class="footer-tittle">
                                 <h4>Quick Links </h4>
                                 <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">School</a></li>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Admission</a></li>
-                                    <li><a href="#">Events</a></li>
-                                    <li><a href="#">Gallery</a></li>
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="/">School</a></li>
+                                    <li><a href="/about/">About</a></li>
+                                    <li><a href="/admissions/">Admission</a></li>
+                                    <li><a href="/events/">Events</a></li>
+                                    <li><a href="/gallery/">Gallery</a></li>
                                 </ul>
                             </div>
                         </div>

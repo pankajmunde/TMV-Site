@@ -44,6 +44,3 @@ def logout_view(request):
     return redirect('/')
 
 
-def home_view(request):
-    return render(request, 'index-2.html')
-

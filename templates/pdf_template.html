@@ -55,6 +55,11 @@
             padding-top: 20px !important;
 
         }
+
+        .profile-photo {
+            margin-left: 200px;
+
+        }
     </style>
 </head>
 <body>
@@ -69,40 +74,54 @@
 <h2 class="infoHeading">GENERAL INFORMATION</h2>
 <br>
 <div>
-    <div>
-        <b class="tp-mr5">Admission for standard : </b>
-        <p style="display: inline-block; color: black">{{ application.admission_std }}</p>
-    </div>
-    <div>
-        <b class="tp-mr5">Student Name : </b>
-        <p style="display: inline-block; color: black">{{ application.student_surname }} {{ application.student_name }} {{ application.student_father_name }}</p>
-        <img src="/static/Student_photos/Hdfc_Check.jpg" alt="Photo">
-    </div>
 
-    <div>
-        <b class="tp-mr5">Gender : </b>
-        <p style="display: inline-block; color: black">{{ application.student_gender }}</p>
-    </div>
-    <div>
-        <b class="tp-mr5">Date of Birth : </b>
-        <p style="display: inline-block; color: black">{{ application.dob }}</p>
-    </div>
-    <div>
-        <b class="tp-mr5">Blood Group : </b>
-        <p style="display: inline-block; color: black">{{ application.student_blood_group }}</p>
-    </div>
-    <div>
-        <b class="tp-mr5">Religion : </b>
-        <p style="display: inline-block; color: black">{{ application.student_religion }}</p>
-    </div>
-    <div>
-        <b class="tp-mr5">Category : </b>
-        <p style="display: inline-block; color: black">{{ application.student_category }}</p>
-    </div>
-    <div>
-        <b class="tp-mr5">Caste|Sub Caste : </b>
-        <p style="display: inline-block; color: black">{{ application.student_caste }}</p>
-    </div>
+
+    <table class="table">
+        <tbody>
+        <tr>
+            <td>
+                <div>
+                    <b class="tp-mr5">Admission for standard : </b>
+                    <p style="display: inline-block; color: black">{{ application.admission_std }}</p>
+                </div>
+                <div>
+                    <b class="tp-mr5">Student Name : </b>
+                    <p style="display: inline-block; color: black">{{ application.student_surname }} {{ application.student_name }} {{ application.student_father_name }}</p>
+                </div>
+                <div>
+                    <b class="tp-mr5">Gender : </b>
+                    <p style="display: inline-block; color: black">{{ application.student_gender }}</p>
+                </div>
+                <div>
+                    <b class="tp-mr5">Date of Birth : </b>
+                    <p style="display: inline-block; color: black">{{ application.dob }}</p>
+                </div>
+                <div>
+                    <b class="tp-mr5">Blood Group : </b>
+                    <p style="display: inline-block; color: black">{{ application.student_blood_group }}</p>
+                </div>
+                <div>
+                    <b class="tp-mr5">Religion : </b>
+                    <p style="display: inline-block; color: black">{{ application.student_religion }}</p>
+                </div>
+                <div>
+                    <b class="tp-mr5">Category : </b>
+                    <p style="display: inline-block; color: black">{{ application.student_category }}</p>
+                </div>
+                <div>
+                    <b class="tp-mr5">Caste|Sub Caste : </b>
+                    <p style="display: inline-block; color: black">{{ application.student_caste }}</p>
+                </div>
+            </td>
+            <td>
+                <div class="profile-photo">
+                    <img src="media/{{ application.student_photo }}" alt="Photo" height="240px">
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
     <div>
         <b class="tp-mr5">Present Address : </b>
         <p style="display: inline-block; color: black">{{ application.student_present_addr }}</p>
@@ -127,7 +146,9 @@
         <b class="tp-mr5">Medium of instruction : </b>
         <p style="display: inline-block; color: black">{{ application.student_previous_medium }}</p>
     </div>
+    <br>
     <h2 class="infoHeading">PERSONAL INFORMATION</h2>
+    <br>
     <div>
         <b class="tp-mr5">Closest Landmark : </b>
         <p style="display: inline-block; color: black">{{ application.student_close_landmark }}</p>
@@ -292,7 +313,6 @@
         <li>Current Electricity Bill</li>
 
     </div>
-    <br>
     <br>
     <br>
     <br>

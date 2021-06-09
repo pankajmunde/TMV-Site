@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'accounts',
     'admission_app',
+    'main_site_app'
 ]
 
 MIDDLEWARE = [
