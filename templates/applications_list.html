@@ -359,7 +359,9 @@
                 <td>{{ obj.username }}</td>
                 <td>{{ obj.admission_std }}</td>
                 <td>{{ obj.created_date }}</td>
-                <td><a href="{% url 'admission_app:pdf-application-view' obj.pk %}" class="header-btn">Print</a></td>
+                <td><a href="{% url 'admission_app:pdf-application-view' obj.pk %}" class="header-btn">Print</a>
+                    <a href="" class="header-btn">Pay</a>
+                </td>
 
             </tr>
         {% endfor %}

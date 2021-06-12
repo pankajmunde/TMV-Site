@@ -8,7 +8,7 @@
     <title>Education</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.html">
+    {#    <link rel="manifest" href="site.html">#}
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/logo/junior.png' %}' %}" width="50%">
 
     <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
@@ -72,9 +72,9 @@
 
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo">
-                                <a href="index-2.html"><img src="{% static 'assets/images1/tilak.png' %}' %}" alt=""
-                                                            width="40%"></a>
-                                <!-- <a href="index-2.html"><img src="{% static 'assets/img/logo/junior.png' %}' %}" alt="" width="100%"></a> -->
+                                <a href="/"><img src="{% static 'assets/images1/tilak.png' %}' %}" alt=""
+                                                 width="40%"></a>
+                                <!-- <a href="/"><img src="{% static 'assets/img/logo/junior.png' %}' %}" alt="" width="100%"></a> -->
 
                             </div>
                         </div>
@@ -100,6 +100,8 @@
                                         <li><a href="/events/">Event </a></li>
                                         <li><a href="">Gallery</a></li>
                                         <li><a href="/contact/">Contact</a></li>
+{#                                        <li><a href="/school-admin/">School Admin</a></li>#}
+
                                         <li>
                                             <div class="header-right-btn f-right  ml-15">
                                                 <a href="/accounts/login" class="header-btn">Enroll Now</a>
@@ -145,48 +147,20 @@
             <div class="row justify-content-center">
                 <div class="col-xl-10 col-lg-10 col-md-10 col-sm-11">
                     <div class="section-tittle text-center mb-70">
-                        <h2>FROM THE CHAIRMAN</h2>
+                        <h2>{{ about.title }}</h2>
                     </div>
                 </div>
             </div>
             <div class="row align-items-center">
                 <div class="col-lg-4 col-md-12">
                     <div class="about-img ">
-                        <img src="{% static 'assets/img/teacher/image2.jpg' %}" alt="" class="w-100">
+                        <img src="/media/{{ about.photo }}" alt="" class="w-100">
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-12">
-                    <p style="text-align: justify;">
-                        This year has most certainly been an unusual year. We have all learnt to adapt, relearn and
-                        overcome unforseen obstacles. The pandemic and the lockdown has taught us lifelong lessons in
-                        adaptability and positivity. Tilak Maharashtra Vidyalaya too has
-                        been adapting to the newer operational methods and began to provide online education for all
-                        classes from the beginning of our regular academic year. It has been a learning process for both
-                        the staff and the students and we
-                        have been successful in the smooth functioning of the online curriculum delivery and conducting
-                        co curricular activities till date. CAPABILITY TO COPABILITY is the new mantra for everyone
-                        which has been adapted enthusiastically
-                        by Tilak Maharashtra Vidyalaya too. The school has conducted several activities online like
-                        celebration of Yoga day, online eco friendly Ganpati making workshop, story telling sessions. We
-                        have also launched the our online
-                        newsletter this year. The Vidyalaya has always had a compassionate outlook towards the society.
-                        Given the present pandemic and lockdown situation, the Vidyalaya organised a donation drive
-                        called “Gift a Diwali”for Diwali. The
-                        drive received a good response and we were able to contribute to making the festival joyous for
-                        just above 250 families. The school has received accolades from the Science Olympiad foundation
-                        and has been recognised as the
-                        Best Holistic school award 2019-20. The Vidyalaya has also been honoured by the ELETS foundation
-                        in the World Education Summit 2020 for Exemplary contribution to Education sector. The
-                        construction of the new school building
-                        is now complete and the entire staff of Tilak Maharshtra Vidyalaya is waiting to welcome our
-                        students into the new premises. As always, we have planned a year full of creative, productive
-                        and stimulating academic and co curricular
-                        activities for our students in the coming year. We are eagerly waiting to meet our students and
-                        are working steadily and surely towards our goal of excellence in all aspects of the school. I
-                        wish all of you good health, prosperity
-                        and a safe and happy new year!
+                    <p style="text-align: justify;">{{ about.description }}
                         <span style="float: right;">
-                                Dr. Pranati. R. Tilak <br>
+                                Dr. {{ about.chairman_name }} <br>
                                 Chairman<br>
                                 Tilak Maharashtra Vidyalaya
                                </span>
@@ -598,8 +572,8 @@
                             <div class="single-footer-caption mb-30">
 
                                 <div class="footer-logo mb-25">
-                                    <a href="index-2.html"><img src="{% static 'assets/img/logo/junior.png' %}' %}"
-                                                                alt="" width="50%"></a>
+                                    <a href="/"><img src="{% static 'assets/img/logo/junior.png' %}' %}"
+                                                     alt="" width="50%"></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">

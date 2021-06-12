@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse, HttpResponseBadRequest
+from django.http import HttpResponse, HttpResponseBadRequest, JsonResponse
 from django.contrib.auth.decorators import login_required
 from .models import StorePrimaryAdmissionFormDetails
 
@@ -161,9 +161,7 @@ def primary_admissions_view(request):
                                                                       electricity_bill=electricity_bill,
                                                                       )
 
-        data = {"application": application}
-        pdf = render_to_pdf('../templates/pdf_template.html', data)
-        return HttpResponse(pdf, content_type='application/pdf')
+        return JsonResponse({"pk":application.id})
 
     return render(request, 'primary_form.html')
 
@@ -318,9 +316,9 @@ def pre_primary_admissions_view(request):
                                                                       electricity_bill=electricity_bill,
                                                                       )
 
-        data = {"application": application}
-        pdf = render_to_pdf('../templates/pdf_template.html', data)
-        return HttpResponse(pdf, content_type='application/pdf')
+        # data = {"application": application}
+        # pdf = render_to_pdf('../templates/pdf_template.html', data)
+        return JsonResponse({"pk":application.id})
 
     return render(request, 'pre_primary_form.html')
 

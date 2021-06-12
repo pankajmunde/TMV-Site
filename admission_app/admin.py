@@ -12,3 +12,4 @@ class StorePrimaryAdmissionFormDetailsAdmin(admin.ModelAdmin):
 
 
 admin.site.register(StorePrimaryAdmissionFormDetails, StorePrimaryAdmissionFormDetailsAdmin)
+admin.site.register(FeesRecord)

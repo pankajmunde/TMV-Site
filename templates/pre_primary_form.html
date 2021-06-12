@@ -868,25 +868,27 @@
             <div class="col-lg-3">
                 <div class="form-group">
                     <label>Students Photo </label> <br>
-                    <input type="file" name="student_photo" class="form-control" placeholder="">
+                    <input type="file" accept="image/jpeg" name="student_photo" class="form-control" placeholder="">
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
                     <label>Original Birth Certificate of Child</label> <br>
-                    <input type="file" name="birth_certificate" class="form-control" placeholder="">
+                    <input type="file" accept="image/jpeg" name="birth_certificate" class="form-control" placeholder="">
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
                     <label>Aadhar Card child, parents/ guardian </label> <br>
-                    <input type="file" name="student_adhaar_card" class="form-control" placeholder="" multiple>
+                    <input type="file" accept="image/jpeg" name="student_adhaar_card" class="form-control"
+                           placeholder="" multiple>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
                     <label>Blood Group Certificate of child </label> <br>
-                    <input type="file" name="blood_group_certificate" class="form-control" placeholder="">
+                    <input type="file" accept="image/jpeg" name="blood_group_certificate" class="form-control"
+                           placeholder="">
                 </div>
             </div>
 
@@ -896,25 +898,28 @@
             <div class="col-lg-3">
                 <div class="form-group">
                     <label>Fitness Certificate of Child </label> <br>
-                    <input type="file" name="fitness_certificate" class="form-control" placeholder="">
+                    <input type="file" accept="image/jpeg" name="fitness_certificate" class="form-control"
+                           placeholder="">
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
                     <label>2 Photographs of child, 1each of parents/ guardian </label> <br>
-                    <input type="file" name="parent_photo" class="form-control" placeholder="" multiple>
+                    <input type="file" accept="image/jpeg" name="parent_photo" class="form-control" placeholder=""
+                           multiple>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
                     <label>Transfer Certificate of Child </label> <br>
-                    <input type="file" name="transfer_certificate" class="form-control" placeholder="">
+                    <input type="file" accept="image/jpeg" name="transfer_certificate" class="form-control"
+                           placeholder="">
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
                     <label> Report Card of Previous School </label> <br>
-                    <input type="file" name="report_card" class="form-control" placeholder="">
+                    <input type="file" accept="image/jpeg" name="report_card" class="form-control" placeholder="">
                 </div>
             </div>
 
@@ -924,13 +929,13 @@
             <div class="col-lg-3">
                 <div class="form-group">
                     <label>Caste Certificate, if applicable </label> <br>
-                    <input type="file" name="caste_certificate" class="form-control" placeholder="">
+                    <input type="file" accept="image/jpeg" name="caste_certificate" class="form-control" placeholder="">
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
                     <label>Current Electricity Bill </label> <br>
-                    <input type="file" name="electricity_bill" class="form-control" placeholder="">
+                    <input type="file" accept="image/jpeg" name="electricity_bill" class="form-control" placeholder="">
                 </div>
             </div>
             <br>
@@ -953,7 +958,7 @@
 
             <div class="col-lg-4">
                 <div class="header-right-btn f-right  ml-15">
-                    <a href="submit" class="header-btn">Save</a>
+                    <button type="submit" class="header-btn">Save</button>
                 </div>
                 <div class="header-right-btn f-right  ml-15">
                     <button type="submit" class="header-btn">Print</button>
@@ -1173,7 +1178,9 @@
             contentType: false,
             processData: false,
             success: function (data) {
-                alert(data)
+                {#alert(data)#}
+                window.location.href = "/admissions/generate-pdf/"+ data.pk + "/"
+
             },
             error: function (data) {
                 alert(data)

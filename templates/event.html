@@ -8,7 +8,7 @@
     <title>Education</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.html">
+    {#    <link rel="manifest" href="site.html">#}
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/logo/junior.png' %}" width="50%">
 
     <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
@@ -75,8 +75,9 @@
 
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo">
-                                <a href="index-2.html"><img src="{% static 'assets/images1/tilak.png' %}" alt="" width="40%"></a>
-                                <!-- <a href="index-2.html"><img src="{% static 'assets/img/logo/junior.png' %}" alt="" width="100%"></a> -->
+                                <a href="/"><img src="{% static 'assets/images1/tilak.png' %}" alt=""
+                                                 width="40%"></a>
+                                <!-- <a href="/"><img src="{% static 'assets/img/logo/junior.png' %}" alt="" width="100%"></a> -->
 
                             </div>
                         </div>
@@ -102,6 +103,8 @@
                                         <li><a href="/events/">Event </a></li>
                                         <li><a href="">Gallery</a></li>
                                         <li><a href="/contact/">Contact</a></li>
+{#                                        <li><a href="/school-admin/">School Admin</a></li>#}
+
                                         <li>
                                             <div class="header-right-btn f-right  ml-15">
                                                 <a href="/accounts/login" class="header-btn">Enroll Now</a>
@@ -147,108 +150,109 @@
             <div class="row">
                 <div class="col-lg-8 mb-5 mb-lg-0">
                     <div class="blog_left_sidebar">
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0"
-                                     src="{% static 'assets/images1/funfair/79952286_10156728766095978_4009422519948804096_n.jpg' %}' %}"
-                                     alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3>15</h3>
-                                    <p>Jan</p>
-                                </a>
-                            </div>
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="blog_details.html">
-                                    <h2 class="blog-head" style="color: #2d2d2d;">Funfair</h2>
-                                </a>
-                                <p>An evening filled with fun activities & learning for the students. For the students
-                                    it was their overexposure to end to end project management in a joyful manner.
-                                </p>
-                                <ul class="blog-info-link">
-                                    <!-- <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li> -->
-                                </ul>
-                            </div>
-                        </article>
-{#                        <article class="blog_item">#}
-{#                            <div class="blog_item_img">#}
-{#                                <img class="card-img rounded-0" src="{% static 'assets/images1/Donation to poor/donate.jpg' %}' %}" alt="">#}
-{#                                <a href="#" class="blog_item_date">#}
-{#                                    <h3>11</h3>#}
-{#                                    <p>Feb</p>#}
-{#                                </a>#}
-{#                            </div>#}
-{#                            <div class="blog_details">#}
-{#                                <a class="d-inline-block" href="blog_details.html">#}
-{#                                    <h2 class="blog-head" style="color: #2d2d2d;">Donation Drive:</h2>#}
-{#                                </a>#}
-{#                                <p>The senior kg students went to give the collected material to the home for needy.#}
-{#                                    When the values of kindness, compassion and giving are rooted since such an early#}
-{#                                    age in you.#}
-{#                                </p>#}
-{#                                <!-- <ul class="blog-info-link">#}
-{#                                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>#}
-{#                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>#}
-{#                                </ul> -->#}
-{#                            </div>#}
-{#                        </article>#}
-{#                        <article class="blog_item">#}
-{#                            <div class="blog_item_img">#}
-{#                                <img class="card-img rounded-0" src="{% static 'assets/images1/Gathering/IMG_5842 (2).jpg' %}' %}" alt="">#}
-{#                                <a href="#" class="blog_item_date">#}
-{#                                    <h3>12</h3>#}
-{#                                    <p>March</p>#}
-{#                                </a>#}
-{#                            </div>#}
-{#                            <div class="blog_details">#}
-{#                                <a class="d-inline-block" href="blog_details.html">#}
-{#                                    <h2 class="blog-head" style="color: #2d2d2d;">Clay modelling:</h2>#}
-{#                                </a>#}
-{#                                <p>Clay modelling is a great way to develop child’s fine motor skills, imagination &#}
-{#                                    spark creativity!#}
-{#                                </p>#}
-{##}
-{#                            </div>#}
-{#                        </article>#}
-{#                        <article class="blog_item">#}
-{#                            <div class="blog_item_img">#}
-{#                                <img class="card-img rounded-0" src="{% static 'assets/img/teacher/flag.jpg' %}' %}" alt="">#}
-{#                                <a href="#" class="blog_item_date">#}
-{#                                    <h3>15</h3>#}
-{#                                    <p>Aug</p>#}
-{#                                </a>#}
-{#                            </div>#}
-{#                            <div class="blog_details">#}
-{#                                <a class="d-inline-block" href="blog_details.html">#}
-{#                                    <h2 class="blog-head" style="color: #2d2d2d;">Independence day celebration:#}
-{#                                    </h2>#}
-{#                                </a>#}
-{#                                <p>Today is a pride moment for all of us , The independence day 2018 or 15 August will#}
-{#                                    bring a lot of celebration moments for all of us , Today it's time to celebrate our#}
-{#                                    freedom </p>#}
-{##}
-{#                            </div>#}
-{#                        </article>#}
-{#                        <article class="blog_item">#}
-{#                            <div class="blog_item_img">#}
-{#                                <img class="card-img rounded-0"#}
-{#                                     src="{% static 'assets/images1/Yoga day/65156168_494394304634918_5101138391240540160_n.jpg' %}' %}"#}
-{#                                     alt="">#}
-{#                                <a href="#" class="blog_item_date">#}
-{#                                    <h3>11</h3>#}
-{#                                    <p>Sep</p>#}
-{#                                </a>#}
-{#                            </div>#}
-{#                            <div class="blog_details">#}
-{#                                <a class="d-inline-block" href="blog_details.html">#}
-{#                                    <h2 class="blog-head" style="color: #2d2d2d;">Yoga Day#}
-{#                                    </h2>#}
-{#                                </a>#}
-{#                                <p> Yoga day was celebrated by performing basic yoga by students. Teachers explained#}
-{#                                    about importance of yoga in daily life.</p>#}
-{##}
-{#                            </div>#}
-{#                        </article>#}
+                        {% for event in events %}
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0"
+                                         src="/media/{{ event.event_photo }}"
+                                         alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>{{ event.event_date }}</h3>
+                                        {#                                        <p>Jan</p>#}
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="#">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">{{ event.event_title }}</h2>
+                                    </a>
+                                    <p>{{ event.event_info }}
+                                    </p>
+                                    <ul class="blog-info-link">
+                                        <!-- <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li> -->
+                                    </ul>
+                                </div>
+                            </article>
+                        {% endfor %}
+                        {#                        <article class="blog_item">#}
+                        {#                            <div class="blog_item_img">#}
+                        {#                                <img class="card-img rounded-0" src="{% static 'assets/images1/Donation to poor/donate.jpg' %}' %}" alt="">#}
+                        {#                                <a href="#" class="blog_item_date">#}
+                        {#                                    <h3>11</h3>#}
+                        {#                                    <p>Feb</p>#}
+                        {#                                </a>#}
+                        {#                            </div>#}
+                        {#                            <div class="blog_details">#}
+                        {#                                <a class="d-inline-block" href="#">#}
+                        {#                                    <h2 class="blog-head" style="color: #2d2d2d;">Donation Drive:</h2>#}
+                        {#                                </a>#}
+                        {#                                <p>The senior kg students went to give the collected material to the home for needy.#}
+                        {#                                    When the values of kindness, compassion and giving are rooted since such an early#}
+                        {#                                    age in you.#}
+                        {#                                </p>#}
+                        {#                                <!-- <ul class="blog-info-link">#}
+                        {#                                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>#}
+                        {#                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>#}
+                        {#                                </ul> -->#}
+                        {#                            </div>#}
+                        {#                        </article>#}
+                        {#                        <article class="blog_item">#}
+                        {#                            <div class="blog_item_img">#}
+                        {#                                <img class="card-img rounded-0" src="{% static 'assets/images1/Gathering/IMG_5842 (2).jpg' %}' %}" alt="">#}
+                        {#                                <a href="#" class="blog_item_date">#}
+                        {#                                    <h3>12</h3>#}
+                        {#                                    <p>March</p>#}
+                        {#                                </a>#}
+                        {#                            </div>#}
+                        {#                            <div class="blog_details">#}
+                        {#                                <a class="d-inline-block" href="#">#}
+                        {#                                    <h2 class="blog-head" style="color: #2d2d2d;">Clay modelling:</h2>#}
+                        {#                                </a>#}
+                        {#                                <p>Clay modelling is a great way to develop child’s fine motor skills, imagination &#}
+                        {#                                    spark creativity!#}
+                        {#                                </p>#}
+                        {##}
+                        {#                            </div>#}
+                        {#                        </article>#}
+                        {#                        <article class="blog_item">#}
+                        {#                            <div class="blog_item_img">#}
+                        {#                                <img class="card-img rounded-0" src="{% static 'assets/img/teacher/flag.jpg' %}' %}" alt="">#}
+                        {#                                <a href="#" class="blog_item_date">#}
+                        {#                                    <h3>15</h3>#}
+                        {#                                    <p>Aug</p>#}
+                        {#                                </a>#}
+                        {#                            </div>#}
+                        {#                            <div class="blog_details">#}
+                        {#                                <a class="d-inline-block" href="#">#}
+                        {#                                    <h2 class="blog-head" style="color: #2d2d2d;">Independence day celebration:#}
+                        {#                                    </h2>#}
+                        {#                                </a>#}
+                        {#                                <p>Today is a pride moment for all of us , The independence day 2018 or 15 August will#}
+                        {#                                    bring a lot of celebration moments for all of us , Today it's time to celebrate our#}
+                        {#                                    freedom </p>#}
+                        {##}
+                        {#                            </div>#}
+                        {#                        </article>#}
+                        {#                        <article class="blog_item">#}
+                        {#                            <div class="blog_item_img">#}
+                        {#                                <img class="card-img rounded-0"#}
+                        {#                                     src="{% static 'assets/images1/Yoga day/65156168_494394304634918_5101138391240540160_n.jpg' %}' %}"#}
+                        {#                                     alt="">#}
+                        {#                                <a href="#" class="blog_item_date">#}
+                        {#                                    <h3>11</h3>#}
+                        {#                                    <p>Sep</p>#}
+                        {#                                </a>#}
+                        {#                            </div>#}
+                        {#                            <div class="blog_details">#}
+                        {#                                <a class="d-inline-block" href="#">#}
+                        {#                                    <h2 class="blog-head" style="color: #2d2d2d;">Yoga Day#}
+                        {#                                    </h2>#}
+                        {#                                </a>#}
+                        {#                                <p> Yoga day was celebrated by performing basic yoga by students. Teachers explained#}
+                        {#                                    about importance of yoga in daily life.</p>#}
+                        {##}
+                        {#                            </div>#}
+                        {#                        </article>#}
 
                         <nav class="blog-pagination justify-content-center d-flex">
                             <ul class="pagination">
@@ -296,7 +300,7 @@
                             <div class="media post_item">
                                 <img src="{% static 'assets/img/post/post_1.png' %}" alt="post">
                                 <div class="media-body">
-                                    <a href="blog_details.html">
+                                    <a href="#">
                                         <h3 style="color: #2d2d2d;">From life was you fish...</h3>
                                     </a>
                                     <p>January 12, 2019</p>
@@ -305,7 +309,7 @@
                             <div class="media post_item">
                                 <img src="{% static 'assets/img/post/post_2.png' %}" alt="post">
                                 <div class="media-body">
-                                    <a href="blog_details.html">
+                                    <a href="#">
                                         <h3 style="color: #2d2d2d;">The Amazing Hubble</h3>
                                     </a>
                                     <p>02 Hours ago</p>
@@ -314,7 +318,7 @@
                             <div class="media post_item">
                                 <img src="{% static 'assets/img/post/post_3.png' %}" alt="post">
                                 <div class="media-body">
-                                    <a href="blog_details.html">
+                                    <a href="#">
                                         <h3 style="color: #2d2d2d;">Astronomy Or Astrology</h3>
                                     </a>
                                     <p>03 Hours ago</p>
@@ -323,7 +327,7 @@
                             <div class="media post_item">
                                 <img src="{% static 'assets/img/post/post_4.png' %}" alt="post">
                                 <div class="media-body">
-                                    <a href="blog_details.html">
+                                    <a href="#">
                                         <h3 style="color: #2d2d2d;">Asteroids telescope</h3>
                                     </a>
                                     <p>01 Hours ago</p>
@@ -424,7 +428,8 @@
                             <div class="single-footer-caption mb-30">
 
                                 <div class="footer-logo mb-25">
-                                    <a href="index-2.html"><img src="{% static 'assets/img/logo/junior.png' %}" alt="" width="50%"></a>
+                                    <a href="/"><img src="{% static 'assets/img/logo/junior.png' %}" alt=""
+                                                     width="50%"></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">

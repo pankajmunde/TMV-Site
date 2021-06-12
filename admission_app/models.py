@@ -84,3 +84,11 @@ class StorePrimaryAdmissionFormDetails(models.Model):
 
     def __str__(self):
         return f"{self.student_surname} {self.student_name} {self.student_father_name}"
+
+
+class FeesRecord(models.Model):
+    form_id = models.OneToOneField(StorePrimaryAdmissionFormDetails, on_delete=models.CASCADE)
+    status = models.BooleanField(default=False)
+
+    def __str__(self):
+        return str(self.form_id.id)

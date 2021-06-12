@@ -27,3 +27,25 @@ class ExpertTeachers(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class UpcomingEvent(models.Model):
+    created_date = models.DateTimeField(default=now)
+    event_date = models.DateField()
+    event_title = models.CharField(max_length=500)
+    event_info = models.TextField()
+    event_poster = models.FileField(upload_to='Event_poster/')
+
+    def __str__(self):
+        return self.event_title
+
+
+class AboutInfo(models.Model):
+    created_date = models.DateTimeField(default=now)
+    title = models.CharField(max_length=500)
+    photo = models.FileField(upload_to="About_photos/")
+    description = models.TextField()
+    chairman_name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.title

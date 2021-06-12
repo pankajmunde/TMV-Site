@@ -50,7 +50,7 @@
         <div class="login-form">
 
             <div class="logo-login">
-                <a href="index-2.html"> <img src="{% static 'assets/img/logo/junior.png' %}" alt=""></a>
+                <a href="/"> <img src="{% static 'assets/img/logo/junior.png' %}" alt=""></a>
             </div>
             <h2>Login Here</h2>
             {#            <div class="form-input">#}
@@ -78,11 +78,14 @@
             <div class="form-input pt-30">
                 <input type="submit" name="submit" value="login">
             </div>
-            <a href="#" class="forget">Forget Password</a>
+            <a href="/account/password_reset/" class="forget">Forget Password</a>
 
             <a href="/accounts/register" class="registration">Registration</a>
+            <a href="/accounts/login/?next=/school-admin/" class="registration">School Admin </a>
             </div>
+        </div>
     </form>
+
 
 </main>
 <script src="{% static 'assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>

@@ -1,0 +1,144 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    {% include 'partials/_alerts.html' %}
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fa fa-align-justify"></i> Students List
+                    <span style="float: right"><label for="filterName"
+                                                      style="margin-right: 10px">Search : </label> <input
+                            id="filterName" type="text" placeholder="Keyword" class="search-key"></span>
+                </div>
+                <div class="card-body">
+                    <table id="myTable" class="table table-responsive-sm table-bordered table-striped table-sm">
+                        <thead>
+                        <tr>
+                            <th>SL</th>
+                            <th>Admission Date</th>
+                            <th>Name</th>
+                            <th>Standard</th>
+                            <th>Docs</th>
+                            <th>Fees</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for student in students %}
+                            <tr>
+                                <td>{{ forloop.counter }}</td>
+                                <td>{{ student.created_date }}</td>
+                                <td data-input="name">{{ student.student_surname }} {{ student.student_name }} {{ student.student_father_name }}</td>
+                                <td>{{ student.admission_std }}</td>
+                                <td>
+                                    {% if not student.birth_certificate == '' %}
+                                        <li><a href="/media/{{ student.birth_certificate }}">Birth Certificate</a></li>
+                                    {% endif %}
+                                    {% if not student.student_adhaar_card == '' %}
+                                        <li><a href="/media/{{ student.student_adhaar_card }}">Adhaar Card</a></li>
+                                    {% endif %}
+                                    {% if not student.blood_group_certificate == '' %}
+                                        <li><a href="/media/{{ student.blood_group_certificate }}">Blood Group</a></li>
+                                    {% endif %}
+                                    {% if not student.blood_group_certificate == '' %}
+                                        <li><a href="/media/{{ student.fitness_certificate }}">Fitness Certificate</a>
+                                        </li>
+                                    {% endif %}
+                                    {% if not student.transfer_certificate == '' %}
+                                        <li><a href="/media/{{ student.fitness_certificate }}">Transfer Certificate</a>
+                                        </li>
+                                    {% endif %}
+                                    {% if not student.report_card == '' %}
+                                        <li><a href="/media/{{ student.report_card }}">Report Card</a>
+                                        </li>
+                                    {% endif %}
+                                    {% if not student.caste_certificate == '' %}
+                                        <li><a href="/media/{{ student.caste_certificate }}">Caste Certificate</a>
+                                        </li>
+                                    {% endif %}
+                                    {% if not student.electricity_bill == '' %}
+                                        <li><a href="/media/{{ student.electricity_bill }}">Electricity Bill</a>
+                                        </li>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    Unpaid
+
+                                </td>
+                                <td>
+                                    <a href="{% url 'admission_app:pdf-application-view' student.pk %}">Print/View</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            {% if students.has_other_pages %}
+                <ul class="pagination">
+                    {% if students.has_previous %}
+                        <li class="page-item">
+                            <a href="?page={{ students.previous_page_number }}" class="page-link">Prev</a>
+                        </li>
+                    {% else %}
+                        <li class="page-item disabled">
+                            <a class="page-link">Prev</a>
+                        </li>
+                    {% endif %}
+                    {% for i in students.paginator.page_range %}
+                        {% if students.number == i %}
+                            <li class="page-item active">
+                                <a class="page-link">{{ i }}</a>
+                            </li>
+                        {% else %}
+                            <li class="page-item">
+                                <a href="?page={{ i }}" class="page-link">{{ i }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if students.has_next %}
+                        <li class="page-item">
+                            <a href="?page={{ students.next_page_number }}" class="page-link">Next</a>
+                        </li>
+                    {% else %}
+                        <li class="page-item disabled">
+                            <a class="page-link">Next</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+
+    <script>
+        function filterTable(event) {
+            var filter = event.target.value.toUpperCase();
+            var rows = document.querySelector("#myTable tbody").rows;
+
+            for (var i = 0; i < rows.length; i++) {
+                var firstCol = rows[i].cells[1].textContent.toUpperCase();
+                var secondCol = rows[i].cells[2].textContent.toUpperCase();
+                var thirdCol = rows[i].cells[3].textContent.toUpperCase();
+                var fourthCol = rows[i].cells[5].textContent.toUpperCase();
+                if (firstCol.indexOf(filter) > -1 || secondCol.indexOf(filter) > -1 || thirdCol.indexOf(filter) > -1 || fourthCol.indexOf(filter) > -1) {
+                    rows[i].style.display = "";
+                } else {
+                    rows[i].style.display = "none";
+                }
+            }
+        }
+
+        document.querySelector('#filterName').addEventListener('keyup', filterTable, false);
+
+    </script>
+
+{% endblock %}

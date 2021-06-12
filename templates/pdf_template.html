@@ -60,15 +60,40 @@
             margin-left: 200px;
 
         }
+
+        .add-border th {
+            border: 1px solid black;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .add-border td {
+            border: 1px solid black;
+        }
+
     </style>
 </head>
 <body>
-<div class="text-center">
-    <p>Tilak Maharashtra Vidyalaya's Trust</p>
-    <h2>TILAK MAHARASHTRA VIDYALAYA'S </h2>
-    <p style="margin-top: 0px;">TMV Campus, Mukundnagar, Gultekadi, Pune-411037</p>
-    <h3>PRIMARY ADMISSION FORM</h3>
-</div>
+<table class="table">
+    <tbody>
+    <tr>
+        {#        <td style="max-width: 150px; padding: 50px">#}
+        {#            <div class="">#}
+        {#            </div>#}
+        {#        </td>#}
+        <td>
+            <img src="static/assets/images1/tilak.png" alt="Photo" height="100">
+
+            <div class="text-center" style="display: inline-block">
+                <p>Tilak Maharashtra Vidyalaya's Trust</p>
+                <h2>TILAK MAHARASHTRA VIDYALAYA'S </h2>
+                <p style="margin-top: 0px;">TMV Campus, Mukundnagar, Gultekadi, Pune-411037</p>
+                <h3>PRIMARY ADMISSION FORM</h3>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
 <hr>
 <br>
 <h2 class="infoHeading">GENERAL INFORMATION</h2>
@@ -175,6 +200,9 @@
         <p style="display: inline-block; color: black">{{ application.student_home_time }}</p>
     </div>
     <br>
+    <br>
+    <br>
+
     <h2 class="infoHeading">FAMILY BACKGROUND</h2>
     <br>
     <div>
@@ -263,7 +291,7 @@
     </div>
     <div>
         {#        <b class="tp-mr5">Name of siblings : </b>#}
-        <table class="table">
+        <table class="table add-border">
             <thead style="text-align: center;">
             <tr>
                 <th scope="row"></th>
@@ -288,6 +316,7 @@
             </tr>
         </table>
     </div>
+    <br>
     <div>
         <b class="tp-mr5">School bus Route Number : </b>
         <p style="display: inline-block; color: black">{{ application.bus_route_num }}</p>

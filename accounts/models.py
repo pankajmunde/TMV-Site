@@ -27,6 +27,7 @@ class MyAccountManager(BaseUserManager):
         user.is_admin = True
         user.is_staff = True
         user.is_superuser = True
+        user.is_active = True
         user.save(using=self._db)
         return user
 
@@ -39,7 +40,7 @@ class User(AbstractBaseUser):
     is_staff = models.BooleanField(default=False)
     is_admin = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
-
+    is_active = models.BooleanField(default=True)
     #
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']

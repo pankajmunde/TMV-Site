@@ -30,7 +30,11 @@ def login_request(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('/admissions')
+                next_url = request.GET.get('next')
+                if not next_url:
+                    return redirect("/admissions")
+                return redirect(next_url)
+                # return redirect('/admissions')
             else:
                 messages.error(request, "Invalid username or password")
         else:
@@ -42,5 +46,4 @@ def login_request(request):
 def logout_view(request):
     logout(request)
     return redirect('/')
-
 
