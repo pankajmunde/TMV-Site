@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <main>
+
+
+        <div class=" section-bg2 section-padding40 " data-background=" ">
+            <div class="container ">
+                <div class="row justify-content-center ">
+                    <div class="col-lg-8 col-md-10 col-sm-11 ">
+
+                        <div class="section-tittle text-center mb-80 ">
+                            <h2>Sport Day</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="class-offer-active section-top-border ">
+                    {% for img in images %}
+                        <div class="col-lg-4 col-md-6 col-sm-6 ">
+
+                            <div class="properties__img ">
+                                <a href="#"><img src="/media/{{ img }}" alt=" "
+                                                 width="100%"></a>
+                                <div class="img-text ">
+
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    {#                    <div class="col-lg-4 col-md-6 col-sm-6 ">#}
+                    {##}
+                    {#                        <div class="properties__img ">#}
+                    {#                            <a href="#"><img src="{% static 'assets/images1/Sport day/_Q0A0057.JPG' %} " alt=" " width="100%"></a>#}
+                    {#                            <div class="img-text ">#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {#                    </div>#}
+                    {#                    <div class="col-lg-4 col-md-6 col-sm-6 ">#}
+                    {##}
+                    {#                        <div class="properties__img ">#}
+                    {#                            <a href="# "><img src="{% static 'assets/images1/Sport day/_Q0A0077.JPG' %}" alt=" " width="100%"></a>#}
+                    {#                            <div class="img-text ">#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {#                    </div>#}
+                </div>
+{#                <div class="class-offer-active section-top-border ">#}
+{#                    <div class="col-lg-4 col-md-6 col-sm-6 ">#}
+{##}
+{#                        <div class="properties__img ">#}
+{#                            <a href="# "><img src="{% static 'assets/images1/Sport day/_Q0A0114.JPG' %}" alt=" "#}
+{#                                              width="100%"></a>#}
+{#                            <div class="img-text ">#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-lg-4 col-md-6 col-sm-6 ">#}
+{##}
+{#                        <div class="properties__img ">#}
+{#                            <a href="# "><img src="{% static 'assets/images1/Sport day/_Q0A0133.JPG' %}" alt=" "#}
+{#                                              width="100%"></a>#}
+{#                            <div class="img-text ">#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-lg-4 col-md-6 col-sm-6 ">#}
+{##}
+{#                        <div class="properties__img ">#}
+{#                            <a href="# "><img src="{% static 'assets/images1/Sport day/_Q0A0167.JPG' %}" alt=" "#}
+{#                                              width="100%"></a>#}
+{#                            <div class="img-text ">#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+
+            </div>
+        </div>
+
+
+    </main>
+
+{% endblock %}

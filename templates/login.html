@@ -1,18 +1,20 @@
+{#{% extends 'base.html' %}#}
 {% load static %}
 {% load widget_tweaks %}
-
+{% load static %}
 <!doctype html>
 <html class="no-js" lang="zxx">
 
+<!-- Mirrored from preview.colorlib.com/theme/kindergarten/register.html' %} by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 May 2021 14:21:47 GMT -->
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> App landing</title>
+    <title>Education</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {#    <link rel="manifest" href="site.html">#}
-    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/logo/junior.png' %}" width="50%">
+    {#    <link rel="manifest" href="site.html' %}">#}
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/logo/Tilak vidyapeeth new logo.jpg' %}">
 
     <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
@@ -37,57 +39,71 @@
         <div class="preloader-inner position-relative">
             <div class="preloader-circle"></div>
             <div class="preloader-img pere-text">
-                <img src="{% static 'assets/img/logo/junior.png' %}" alt="">
+                <img src="{% static 'assets/img/logo/Vidyalaya Logo (2) (1).png' %}" alt="">
             </div>
         </div>
     </div>
 </div>
 
+
 <main class="login-body" data-vide-bg="{% static 'assets/img/login-bg.mp4' %}">
 
-    <form class="form-default" enctype="multipart/form-data" method="POST">
-        {% csrf_token %}
-        <div class="login-form">
+        <form class="form-default" enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+            <div class="login-form">
 
-            <div class="logo-login">
-                <a href="/"> <img src="{% static 'assets/img/logo/junior.png' %}" alt=""></a>
+                <div class="logo-login">
+                    <a href="/"> <img src="{% static 'assets/img/logo/Vidyalaya Logo (2) (1).png' %}" alt=""></a>
+                </div>
+                <h2>Login Here</h2>
+                {#            <div class="form-input">#}
+                {#                <label for="name">Email</label>#}
+                {#                <input type="email" name="email" placeholder="">#}
+                {#            </div>#}
+                {#            <div class="form-input">#}
+                {#                <label for="name">Password</label>#}
+                {#                <input type="password" name="password" placeholder="">#}
+                {#            </div>#}
+                {#            <div class="form-input pt-30">#}
+                {#                <input type="submit" name="submit" value="login">#}
+                {#            </div>#}
+                {% for field in login_form.visible_fields %}
+                    <div class="form-input">
+                    {{ field.label_tag }}
+                    {% render_field field class="" %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <span style="color:red">{{ message }}</span>
+                        {% endfor %}
+                    {% endif %}
+
+                {% endfor %}
+                <div class="form-input pt-30">
+                    <input type="submit" name="submit" value="login">
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6"><a href="/account/password_reset/" class="" style="color: black;">Forget
+                        Password </a></div>
+                    <div class="col-lg-6"><a href="/accounts/register" class="pull-right"
+                                             style="color: black;">Registration</a></div>
+                    <div class="col-lg-6" style="margin-top: 12px;"><a href="/accounts/login/?next=/school-admin/"
+                                                                       class="pull-right"
+                                                                       style="color: black;">School Admin</a></div>
+
+                </div>
+                {#                <a href="/account/password_reset/" class="forget">Forget Password</a>#}
+                {##}
+                {#                <a href="/accounts/register" class="registration">Registration</a>#}
+                {#                <a href="/accounts/login/?next=/school-admin/" class="registration">School Admin </a>#}
+                </div>
             </div>
-            <h2>Login Here</h2>
-            {#            <div class="form-input">#}
-            {#                <label for="name">Email</label>#}
-            {#                <input type="email" name="email" placeholder="">#}
-            {#            </div>#}
-            {#            <div class="form-input">#}
-            {#                <label for="name">Password</label>#}
-            {#                <input type="password" name="password" placeholder="">#}
-            {#            </div>#}
-            {#            <div class="form-input pt-30">#}
-            {#                <input type="submit" name="submit" value="login">#}
-            {#            </div>#}
-            {% for field in login_form.visible_fields %}
-                <div class="form-input">
-                {{ field.label_tag }}
-                {% render_field field class="" %}
-                {% if messages %}
-                    {% for message in messages %}
-                        <span style="color:red">{{ message }}</span>
-                    {% endfor %}
-                {% endif %}
-
-            {% endfor %}
-            <div class="form-input pt-30">
-                <input type="submit" name="submit" value="login">
-            </div>
-            <a href="/account/password_reset/" class="forget">Forget Password</a>
-
-            <a href="/accounts/register" class="registration">Registration</a>
-            <a href="/accounts/login/?next=/school-admin/" class="registration">School Admin </a>
-            </div>
-        </div>
-    </form>
+        </form>
 
 
-</main>
+    </main>
+
+
 <script src="{% static 'assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
 
 <script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
@@ -108,14 +124,14 @@
 <script src="{% static 'assets/js/gijgo.min.js' %}"></script>
 
 <script src="{% static 'assets/js/jquery.nice-select.min.js' %}"></script>
-{#    <script src="{% static 'assets/js/jquery.sticky.html"></script>#}
+{#    <script src="{% static 'assets/js/jquery.sticky.html' %}"></script>#}
 
 <script src="{% static 'assets/js/jquery.barfiller.js' %}"></script>
 
-{#<script src="{% static 'assets/js/jquery.counterup.min.html"></script>#}
-{#<script src="{% static 'assets/js/waypoints.min.html"></script>#}
-{#<script src="{% static 'assets/js/jquery.countdown.min.html"></script>#}
-{#<script src="{% static 'assets/js/hover-direction-snake.min.html"></script>#}
+{#    <script src="{% static 'assets/js/jquery.counterup.min.html' %}"></script>#}
+{#    <script src="{% static 'assets/js/waypoints.min.html' %}"></script>#}
+{#    <script src="{% static 'assets/js/jquery.countdown.min.html' %}"></script>#}
+{#    <script src="{% static 'assets/js/hover-direction-snake.min.html' %}"></script>#}
 
 <script src="{% static 'assets/js/contact.js' %}"></script>
 <script src="{% static 'assets/js/jquery.form.js' %}"></script>
@@ -127,4 +143,11 @@
 <script src="{% static 'assets/js/main.js' %}"></script>
 </body>
 
+<!-- Mirrored from preview.colorlib.com/theme/kindergarten/register.html' %} by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 May 2021 14:21:47 GMT -->
+
 </html>
+{#{% block content %}#}
+
+
+
+{#{% endblock %}#}

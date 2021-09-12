@@ -3,6 +3,7 @@
 *.pyc
 __pycache__/
 local_settings.py
+SchoolSite_updated.zip
 db.sqlite3
 venv
 .vscode

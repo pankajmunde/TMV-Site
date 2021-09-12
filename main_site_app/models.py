@@ -2,6 +2,23 @@ from django.db import models
 from django.utils.timezone import now
 
 
+class Gallery(models.Model):
+    title = models.CharField(max_length=250)
+    description = models.TextField()
+    image = models.FileField(blank=True)
+
+    def __str__(self):
+        return self.title
+
+
+class GalleryImage(models.Model):
+    gallery = models.ForeignKey(Gallery, default=None, on_delete=models.CASCADE)
+    images = models.FileField(upload_to='images/')
+
+    def __str__(self):
+        return self.gallery.title
+
+
 # Create your models here.
 class AddEvents(models.Model):
     created_date = models.DateTimeField(default=now)

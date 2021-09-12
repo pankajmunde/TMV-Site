@@ -10,6 +10,6 @@ class StorePrimaryAdmissionFormDetailsAdmin(admin.ModelAdmin):
             form.base_fields[key].required = False
         return form
 
-
+admin.site.site_header = 'TMV Administration'
 admin.site.register(StorePrimaryAdmissionFormDetails, StorePrimaryAdmissionFormDetailsAdmin)
 admin.site.register(FeesRecord)

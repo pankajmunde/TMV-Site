@@ -62,6 +62,89 @@ def contact_view(request):
         return HttpResponse(f"Email Sent Successfully<hr><br>We will get back to you soon. Thank You!!<br>Go to <a href='/'>Home</a>")
     return render(request, 'contact.html')
 
+def gallery_view(request):
+
+    return render(request, 'Gallary.html')
+
+
+def sports_view(request):
+    gallery = Gallery.objects.filter(title="Sports Day").first()
+    obj = GalleryImage.objects.filter(gallery=gallery)
+    images = [i.images for i in obj]
+    return render(request, 'sportday.html', {"images":images})
+
+def wari_view(request):
+    gallery = Gallery.objects.filter(title="wari").first()
+    obj = GalleryImage.objects.filter(gallery=gallery)
+    images = [i.images for i in obj]
+    return render(request, 'wari.html', {"images":images})
+
+def yoga_view(request):
+    gallery = Gallery.objects.filter(title="yoga").first()
+    obj = GalleryImage.objects.filter(gallery=gallery)
+    images = [i.images for i in obj]
+    return render(request, 'Yoga.html', {"images":images})
+
+def navratri_view(request):
+    gallery = Gallery.objects.filter(title="navratri").first()
+    obj = GalleryImage.objects.filter(gallery=gallery)
+    images = [i.images for i in obj]
+    return render(request, 'navratri.html', {"images":images})
+
+
+def dushera_view(request):
+    gallery = Gallery.objects.filter(title="dushera").first()
+    obj = GalleryImage.objects.filter(gallery=gallery)
+    images = [i.images for i in obj]
+    return render(request, 'Dusshra.html', {"images":images})
+
+def holi_view(request):
+    gallery = Gallery.objects.filter(title="holi").first()
+    obj = GalleryImage.objects.filter(gallery=gallery)
+    images = [i.images for i in obj]
+    return render(request, 'Holi.html', {"images":images})
+
+def funfair_view(request):
+    gallery = Gallery.objects.filter(title="funfair").first()
+    obj = GalleryImage.objects.filter(gallery=gallery)
+    images = [i.images for i in obj]
+    return render(request, 'funfair.html', {"images":images})
+
+def ganpati_view(request):
+    gallery = Gallery.objects.filter(title="ganpati").first()
+    obj = GalleryImage.objects.filter(gallery=gallery)
+    images = [i.images for i in obj]
+    return render(request, 'ganpati.html', {"images":images})
+
+def gathering_view(request):
+    gallery = Gallery.objects.filter(title="Gathering").first()
+    obj = GalleryImage.objects.filter(gallery=gallery)
+    images = [i.images for i in obj]
+    return render(request, 'Gathering.html', {"images":images})
+
+def chrismas_view(request):
+    gallery = Gallery.objects.filter(title="cristmas").first()
+    obj = GalleryImage.objects.filter(gallery=gallery)
+    images = [i.images for i in obj]
+    return render(request, 'cristmas.html', {"images":images})
+
+def donation_view(request):
+    gallery = Gallery.objects.filter(title="donation").first()
+    obj = GalleryImage.objects.filter(gallery=gallery)
+    images = [i.images for i in obj]
+    return render(request, 'donation.html', {"images":images})
+
+def janmastami_view(request):
+    gallery = Gallery.objects.filter(title="janmastmi").first()
+    obj = GalleryImage.objects.filter(gallery=gallery)
+    images = [i.images for i in obj]
+    return render(request, 'janmastmi.html', {"images":images})
+
+def other_view(request):
+    gallery = Gallery.objects.filter(title="other").first()
+    obj = GalleryImage.objects.filter(gallery=gallery)
+    images = [i.images for i in obj]
+    return render(request, 'other.html', {"images":images})
 
 # Create your views here.
 @login_required
